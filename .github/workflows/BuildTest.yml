@@ -1,0 +1,16 @@
+name: BuildTest
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  BuildTest:
+    runs-on: self-hosted
+    
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build Debug
+        run: swift build
+      - name: Run tests
+        run: swift test
