@@ -9,16 +9,26 @@ func routes(_ app: Application) throws {
         return "Hello, world!"
     }
   
-    app.get("getResponses", ":uid") { req -> [String: [String: String]] in
+    app.get("getResponses", ":uid") { req -> [SurveyResponse] in
+        var responses = [SurveyResponse]()
+
         guard let uid = req.parameters.get("uid") else {
-            return [String: [String: String]]()
+            return responses
         }
 
-        if let data = app.data?.surveys[uid] {
-            return data
+        if let data = app.data?.surveyResponses {
+            responses = data.filter { $0.uid == uid }
         }
-        return [String: [String: String]]()
-           }
-                                    
-   
+
+        return responses
+    }
+
+    app.get("getSurveys") { req -> [Survey] in
+        if let surveys = app.data?.surveys {
+            return surveys
+        }
+
+        return [Survey]()
+    }
+
 }

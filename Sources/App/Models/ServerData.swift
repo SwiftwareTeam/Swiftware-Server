@@ -8,55 +8,225 @@
 import Vapor
 
 final class ServerData {
-    var surveys = [String:[String:[String: String]]]()
+
+    var surveys = [Survey]()
+    var surveyResponses = [SurveyResponse]()
 
     init() {
-        let directoryURL = FileManager.default.currentDirectoryPath
-//        print(directoryURL)
 
-        let fileURL = URL(fileURLWithPath: directoryURL + "/Resources/SimpleSurveyData.csv")
+        // Survey 1
+        surveys.append(loadSurvey(id: 1, name: "Big Five", group: "I see myself as"))
+        surveyResponses = loadResponses(surveyid: 1)
 
-//        print(fileURL)
+    }
+
+    func loadQuestions(baseDir: String) -> [Int: Question] {
+
+        let url = URL(fileURLWithPath: baseDir + "Questions.csv")
+
+        var questions = [Int: Question]()
 
         do {
-            // Attempt to load the data from the file
-            let savedData = try Data(contentsOf: fileURL)
+            let data = try Data(contentsOf: url) // Create saved data buffer
 
-            // Convert the data to a String
-            if let savedString = String(data: savedData, encoding: .utf8) {
-                let lines = savedString.components(separatedBy: "\n")
+            // Convert Data Buffer into String
+            if let dataString = String(data: data, encoding: .utf8) {
+
+                // Create Array of Strings consisting of each line
+                let lines: [String] = dataString.components(separatedBy: "\n")
+
+
+                // 2D Array in which each row is an array of columns for the given row in the sheet
+                // Outer Array represents a line or row from the csv file
                 var dataArray = [[String]]()
+
+
                 for line in lines {
-                    dataArray.append(line.components(separatedBy: ","))
+                    // Convert the String for the given line to an array of tokens separated by a comma
+                    // Then, use a map to transform each string in the array. The map uses a filter to
+                    // remove whitespace from the string. Finally, append results to the data array
+
+                    let lineArray = line.components(separatedBy: ",").map { str in
+                        return str.filter {!$0.isWhitespace }
+                    }
+
+                    dataArray.append(lineArray)
                 }
 
-            var columns = dataArray[0]
-                columns.remove(at: 0)
-                columns.remove(at: 1)
+                dataArray.remove(at: 0) // Remove header
 
-            dataArray.remove(at: 0)
-
-            var mutableRow: [String]
-            for row in dataArray {
-                mutableRow = row
-
-                let uid = mutableRow[0]
-                let type = mutableRow[1]
-
-                mutableRow.remove(at: 0)
-                mutableRow.remove(at: 1)
-
-                if self.surveys[uid] == nil {
-                    self.surveys[uid] = [String : [String: String]]()
+                var id: Int
+                for row in dataArray {
+                    // Convert id into integers
+                    id = Int(row[0])!
+                    questions[id] = Question(id: id, shortWording: row[1], fullWording: row[2])
                 }
-                let dict = Dictionary(uniqueKeysWithValues: zip(columns, mutableRow))
-                self.surveys[uid]?[type] = dict
-            }
 
+            } else {
+                print("Error: Unable to convert Data Buffer for questions into String")
             }
         } catch {
-            print("Unable to load data from \(fileURL)")
+            print("Error: unable to read question data at: \(baseDir)" + "Questions.csv")
         }
+
+        return questions
+
+    }
+
+    func loadAnswers(baseDir: String) -> [Int: Answer] {
+
+        let url = URL(fileURLWithPath: baseDir + "Answers.csv")
+
+        var answers = [Int: Answer]()
+
+        do {
+          let data = try Data(contentsOf: url) // Create saved data buffer
+
+          // Convert Data Buffer into String
+          if let dataString = String(data: data, encoding: .utf8) {
+
+              // Create Array of Strings consisting of each line
+              let lines: [String] = dataString.components(separatedBy: "\n")
+
+
+              // 2D Array in which each row is an array of columns for the given row in the sheet
+              // Outer Array represents a line or row from the csv file
+              var dataArray = [[String]]()
+
+
+              for line in lines {
+                  // Convert the String for the given line to an array of tokens separated by a comma
+                  // Then, use a map to transform each string in the array. The map uses a filter to
+                  // remove whitespace from the string. Finally, append results to the data array
+
+                  let lineArray = line.components(separatedBy: ",").map { str in
+                      return str.filter {!$0.isWhitespace }
+                  }
+
+                  dataArray.append(lineArray)
+              }
+
+              dataArray.remove(at: 0) // Remove header
+
+              var id: Int
+              var value: Int
+
+              for row in dataArray {
+
+                  // Convert id and value into Integers
+                  id = Int(row[0])!
+                  value = Int(row[2])!
+
+                  answers[id] = Answer(id: id, label: row[1], value: value)
+
+              }
+
+          } else {
+              print("Error: Unable to convert Data Buffer for answers into String")
+          }
+        } catch {
+          print("Error: unable to read answer data at: \(baseDir)" + "Answers.csv")
+        }
+
+        return answers
+
+    }
+
+    func loadSurvey(id: Int, name: String, group: String) -> Survey {
+        let currentDir = FileManager.default.currentDirectoryPath
+        let baseDir = currentDir + "/Resources/survey" + String(id)
+
+        let questions = loadQuestions(baseDir: baseDir)
+        let answers = loadAnswers(baseDir: baseDir)
+
+        return Survey(id: id, name: name, group: group,
+                      questions: questions, answers: answers)
+
+    }
+
+    func loadResponses(surveyid: Int) -> [SurveyResponse] {
+
+        let currentDir = FileManager.default.currentDirectoryPath
+        let responsesDir = currentDir + "/Resources/survey" + String(surveyid) + "Responses.csv"
+
+        let url = URL(fileURLWithPath: responsesDir)
+
+        var responses = [SurveyResponse]()
+
+        do {
+          let data = try Data(contentsOf: url) // Create saved data buffer
+
+          // Convert Data Buffer into String
+          if let dataString = String(data: data, encoding: .utf8) {
+
+              // Create Array of Strings consisting of each line
+              let lines: [String] = dataString.components(separatedBy: "\n")
+
+
+              // 2D Array in which each row is an array of columns for the given row in the sheet
+              // Outer Array represents a line or row from the csv file
+              var dataArray = [[String]]()
+
+
+              for line in lines {
+                  // Convert the String for the given line to an array of tokens separated by a comma
+                  // Then, use a map to transform each string in the array. The map uses a filter to
+                  // remove whitespace from the string. Finally, append results to the data array
+
+                  let lineArray = line.components(separatedBy: ",").map { str in
+                      return str.filter {!$0.isWhitespace }
+                  }
+
+                  dataArray.append(lineArray)
+              }
+
+              var header: [String] = dataArray[0] // Save header as own variable
+
+              header.removeFirst(2) // Remove the first two columns of header, since they never change
+
+              let questionIDs: [Int] = header.map { Int($0)! } // Convert the columns in the header to Ints, which are the questionID
+
+              dataArray.remove(at: 0) // Remove header
+
+
+
+              for row in dataArray {
+                  let uid = row[0]
+                  let responseType = row[1]
+
+                  // Create changeable row which can be modified, unlike the row in the loop
+                  var changeableRow = row
+                  changeableRow.removeFirst(2)
+
+                  // Initialize Empty Dictionary of QuestionID: AnswerID
+                  var currentResponses = [Int: Int]()
+
+                  // Iterate over the row with the index as well
+                  for (index, answerID) in changeableRow.enumerated() {
+                      // Use index to lookup the questionID from the modified header array we saved
+                      // the modified header and modified row have the same number of columns
+
+                      let questionID = questionIDs[index]
+
+                      // Add the response to the given question in the responses Dictionary
+                      currentResponses[questionID] = Int(answerID)!
+                  }
+
+                  responses.append(SurveyResponse(uid: uid, surveyID: surveyid,
+                                                  responseType: responseType, responses: currentResponses))
+
+              }
+
+          } else {
+              print("Error: Unable to convert Data Buffer for Responses into String")
+          }
+        } catch {
+          print("Error: unable to read response data at: \(responsesDir)")
+        }
+
+        return responses
+
+
     }
 }
 
