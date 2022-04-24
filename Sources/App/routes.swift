@@ -24,7 +24,7 @@ func routes(_ app: Application) throws {
 
         let questions = ["question 1", "question 2", "question 3"]
         let answers = ["Answer 1", "Answer 2", "Answer 3"]
-        return SurveyResponse(uid: "u000", responseType: "pre", questions: questions, answers: answers)
+        return SurveyResponse(uid: "u000", surveyID: "S1", responseType: "pre", responses: ["Q1-1": "Q1-1-1", "Q1-2": "Q1-2-3"])
     }
 
     app.get("test2") { req -> Survey in
@@ -45,7 +45,7 @@ func routes(_ app: Application) throws {
         let answers = [answer1.id: answer1, answer2.id: answer2, answer3.id: answer3,
                        answer4.id: answer4, answer5.id: answer5]
 
-        return Survey(name: "Big Five", group: "I see myself as", questions: questions, answers: answers)
+        return Survey(id: "S1", name: "Big Five", group: "I see myself as", questions: questions, answers: answers)
     }
 
 

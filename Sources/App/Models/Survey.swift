@@ -21,6 +21,7 @@ struct Answer: Content {
 }
 
 struct Survey: Content {
+    var id: String
     var name: String
     var group: String
     var questions: [String : Question] // QuestionID: Question
