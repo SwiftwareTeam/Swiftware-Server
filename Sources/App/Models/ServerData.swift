@@ -209,7 +209,14 @@ final class ServerData {
                       let questionID = questionIDs[index]
 
                       // Add the response to the given question in the responses Dictionary
-                      currentResponses[questionID] = Int(answerID)!
+
+                      // If the int can be parsed, check if answer is 0. If so, return nil
+                      var returnAnswer = Int(answerID)
+                      if returnAnswer == 0 {
+                          returnAnswer = nil
+                      }
+
+                      currentResponses[questionID] = returnAnswer
                   }
 
                   responses.append(SurveyResponse(uid: uid, surveyID: surveyid,
