@@ -134,7 +134,7 @@ final class ServerData {
 
     func loadSurvey(id: Int, name: String, group: String) -> Survey {
         let currentDir = FileManager.default.currentDirectoryPath
-        let baseDir = currentDir + "/Resources/survey" + String(id)
+        let baseDir = currentDir + "/Resources/Survey" + String(id)
 
         let questions = loadQuestions(baseDir: baseDir)
         let answers = loadAnswers(baseDir: baseDir)
@@ -147,7 +147,7 @@ final class ServerData {
     func loadResponses(surveyid: Int) -> [SurveyResponse] {
 
         let currentDir = FileManager.default.currentDirectoryPath
-        let responsesDir = currentDir + "/Resources/survey" + String(surveyid) + "Responses.csv"
+        let responsesDir = currentDir + "/Resources/Survey" + String(surveyid) + "Responses.csv"
 
         let url = URL(fileURLWithPath: responsesDir)
 
