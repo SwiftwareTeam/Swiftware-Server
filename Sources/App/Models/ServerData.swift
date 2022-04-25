@@ -13,7 +13,9 @@ final class ServerData {
     var surveys = [Survey]()
     var surveyResponses = [SurveyResponse]()
     var surveyEncoder = JSONEncoder()
+    var surveyDecoder = JSONDecoder()
     var JSONdata = Data()
+    
     //let JSONdata = try surveyEncoder.encode(surveys)
     init() {
 
@@ -21,6 +23,7 @@ final class ServerData {
         surveys.append(loadSurvey(id: 1, name: "Big Five", group: "I see myself as"))
         surveyResponses = loadResponses(surveyid: 1)
         //saveUpdatedData()
+        //decodeUpdatedData()
     }
     
     func saveUpdatedData() {
@@ -41,8 +44,7 @@ final class ServerData {
             print(error)
         }
     }
-<<<<<<< Updated upstream
-=======
+
     func decodeUpdatedData() {
         let jsonDir = "file://" + FileManager.default.currentDirectoryPath + "/Resources/UpdatedResponse.json"
         
@@ -62,7 +64,7 @@ final class ServerData {
             print(error.localizedDescription)
         }
     }
->>>>>>> Stashed changes
+
 
     func loadQuestions(baseDir: String) -> [Int: Question] {
 
