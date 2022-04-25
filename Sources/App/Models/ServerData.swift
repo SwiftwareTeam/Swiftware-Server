@@ -13,7 +13,9 @@ final class ServerData {
     var surveys = [Survey]()
     var surveyResponses = [SurveyResponse]()
     var surveyEncoder = JSONEncoder()
+    var surveyDecoder = JSONDecoder()
     var JSONdata = Data()
+    
     //let JSONdata = try surveyEncoder.encode(surveys)
     init() {
 
@@ -21,6 +23,7 @@ final class ServerData {
         surveys.append(loadSurvey(id: 1, name: "Big Five", group: "I see myself as"))
         surveyResponses = loadResponses(surveyid: 1)
         //saveUpdatedData()
+        //decodeUpdatedData()
     }
     
     func saveUpdatedData() {
@@ -31,7 +34,9 @@ final class ServerData {
         } catch let error {
             print(error.localizedDescription)
         }
-        let url = URL(string: "file:///Users/adriankhor/Documents/GitHub/Swiftware-Server/Resources/UpdatedResponse.json")!
+        let jsonDir = "file://" + FileManager.default.currentDirectoryPath + "/Resources/UpdatedResponse.json"
+        let url = URL(string: jsonDir)!
+        
         do {
             try JSONdata.write(to: url)
             print("success")
@@ -39,6 +44,27 @@ final class ServerData {
             print(error)
         }
     }
+
+    func decodeUpdatedData() {
+        let jsonDir = "file://" + FileManager.default.currentDirectoryPath + "/Resources/UpdatedResponse.json"
+        
+        let url = URL(string: jsonDir)!
+        
+        var subdata = Data();
+        do {
+            subdata = try Data(contentsOf: url)
+        } catch let error {
+            print(error)
+        }
+        do {
+            let array = try surveyDecoder.decode([Survey].self, from: subdata)
+            surveys = array
+            //print(surveys)
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+
 
     func loadQuestions(baseDir: String) -> [Int: Question] {
 
