@@ -30,8 +30,7 @@ func routes(_ app: Application) throws {
 
         return [Survey]()
     }
-    
-   
+
     
     app.get("backUp"){ req -> String in
     
@@ -44,5 +43,17 @@ func routes(_ app: Application) throws {
         return message
         
     }
+
+
+    app.post("createResponse") { req -> String in
+
+        if let surveyResponse = try? req.content.decode(SurveyResponse.self) {
+            return "Successfully Received and Decoded Survey Response"
+        } else {
+            return "Unable to Decode Survey Response Object"
+        }
+        
+    }
+
 }
 

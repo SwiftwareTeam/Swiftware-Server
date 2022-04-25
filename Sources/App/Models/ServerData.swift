@@ -6,18 +6,38 @@
 //
 
 import Vapor
+import Foundation
 
 final class ServerData {
 
     var surveys = [Survey]()
     var surveyResponses = [SurveyResponse]()
-
+    var surveyEncoder = JSONEncoder()
+    var JSONdata = Data()
+    //let JSONdata = try surveyEncoder.encode(surveys)
     init() {
 
         // Survey 1
         surveys.append(loadSurvey(id: 1, name: "Big Five", group: "I see myself as"))
         surveyResponses = loadResponses(surveyid: 1)
-
+        //saveUpdatedData()
+    }
+    
+    func saveUpdatedData() {
+        surveyEncoder.outputFormatting = .prettyPrinted
+        do {
+            JSONdata = try surveyEncoder.encode(surveys)
+            //print(String(data: JSONdata, encoding: .utf8)!)
+        } catch let error {
+            print(error.localizedDescription)
+        }
+        let url = URL(string: "file:///Users/adriankhor/Documents/GitHub/Swiftware-Server/Resources/UpdatedResponse.json")!
+        do {
+            try JSONdata.write(to: url)
+            print("success")
+        } catch {
+            print(error)
+        }
     }
 
     func loadQuestions(baseDir: String) -> [Int: Question] {
@@ -70,7 +90,7 @@ final class ServerData {
         }
 
         return questions
-
+        
     }
 
     func loadAnswers(baseDir: String) -> [Int: Answer] {
