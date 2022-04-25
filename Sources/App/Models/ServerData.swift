@@ -31,7 +31,9 @@ final class ServerData {
         } catch let error {
             print(error.localizedDescription)
         }
-        let url = URL(string: "file:///Users/adriankhor/Documents/GitHub/Swiftware-Server/Resources/UpdatedResponse.json")!
+        let jsonDir = "file://" + FileManager.default.currentDirectoryPath + "/Resources/UpdatedResponse.json"
+        let url = URL(string: jsonDir)!
+        
         do {
             try JSONdata.write(to: url)
             print("success")
@@ -39,6 +41,28 @@ final class ServerData {
             print(error)
         }
     }
+<<<<<<< Updated upstream
+=======
+    func decodeUpdatedData() {
+        let jsonDir = "file://" + FileManager.default.currentDirectoryPath + "/Resources/UpdatedResponse.json"
+        
+        let url = URL(string: jsonDir)!
+        
+        var subdata = Data();
+        do {
+            subdata = try Data(contentsOf: url)
+        } catch let error {
+            print(error)
+        }
+        do {
+            let array = try surveyDecoder.decode([Survey].self, from: subdata)
+            surveys = array
+            //print(surveys)
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+>>>>>>> Stashed changes
 
     func loadQuestions(baseDir: String) -> [Int: Question] {
 
