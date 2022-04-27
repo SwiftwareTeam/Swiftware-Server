@@ -31,13 +31,25 @@ func routes(_ app: Application) throws {
         return [Survey]()
     }
 
-    app.post("createResponse") { req -> String in
+    app.post("createResponse") { req -> Response in
 
-        if let surveyResponse = try? req.content.decode(SurveyResponse.self) {
-            return "Successfully Received and Decoded Survey Response"
-        } else {
-            return "Unable to Decode Survey Response Object"
+        if app.data == nil {
+            req.logger.error("App.data is nil")
+            throw Abort(.internalServerError, reason: "Unable to Load Server Data")
         }
+
+        guard let surveyResponse = try? req.content.decode(SurveyResponse.self) else {
+            throw Abort(.badRequest, reason: "Not a valid Survey Response Object")
+        }
+        req.logger.info("Responses: \(surveyResponse.responses)")
+
+        if (app.data?.surveyResponses.append(surveyResponse)) == nil {
+            throw Abort(.internalServerError, reason: "Unable to add survey response to app data")
+        }
+
+        req.logger.info("Successfully Inserted SurveyResponse")
+
+        return Response(status: .created)
         
     }
 

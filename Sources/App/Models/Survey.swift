@@ -8,19 +8,19 @@
 import Foundation
 import Vapor
 
-struct Question: Content {
+struct Question: Content, Equatable {
     var id: Int
     var shortWording: String
     var fullWording: String
 }
 
-struct Answer: Content {
+struct Answer: Content, Equatable {
     var id: Int
     var label: String
     var value: Int
 }
 
-struct Survey: Content {
+struct Survey: Content, Equatable {
     var id: Int
     var name: String
     var group: String
