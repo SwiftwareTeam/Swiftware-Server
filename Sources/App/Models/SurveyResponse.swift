@@ -8,7 +8,7 @@
 import Foundation
 import Vapor
 
-struct SurveyResponse: Content {
+struct SurveyResponse: Content, Equatable {
     var id = UUID()
     var uid: String
     var surveyID: Int
