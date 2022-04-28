@@ -13,7 +13,7 @@ func routes(_ app: Application) throws {
 
     app.get("getResponses", ":uid") { req -> [SurveyResponse] in
         guard let uid = req.parameters.get("uid") else {
-            throw Abort(.notFound)
+            throw Abort(.notFound, reason: "Unable to find uid")
         }
 
         if let responses = try? await app.dataController?.getSurveyResponses(uid: uid) {
@@ -35,7 +35,7 @@ func routes(_ app: Application) throws {
 
         if app.dataController == nil {
             req.logger.error("Data Controller not Initialized")
-            throw Abort(.internalServerError, reason: "Unable to Load Server Data")
+            throw Abort(.internalServerError, reason: "Unable to Load Data Controller")
         }
 
         guard let surveyResponse = try? req.content.decode(SurveyResponse.self) else {
@@ -68,5 +68,23 @@ func routes(_ app: Application) throws {
             return Response(status: .ok)
         }
     }
+    app.delete("deleteResponse") { req -> Response in
+        if app.dataController == nil {
+            req.logger.error("Data Controller not Initialized")
+            throw Abort(.internalServerError, reason: "Unable to Load Data Controller")
+        }
+
+        guard let surveyResponse = try? req.content.decode(SurveyResponse.self) else {
+            throw Abort(.badRequest, reason: "Nota a valid UUID")
+        }
+
+        if (try? await app.dataController?.deleteResponse(id: surveyResponse.id)) == true {
+            return Response(status: .ok)
+        } else {
+            throw Abort(.notFound, reason: "UUID Not Found in Response List")
+        }
+    }
+
+}
 
 }
