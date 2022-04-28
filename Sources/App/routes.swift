@@ -16,7 +16,7 @@ func routes(_ app: Application) throws {
             return responses
         }
 
-        if let data = app.data?.surveyResponses {
+        if let data = await app.dataController?.surveyResponses {
             responses = data.filter { $0.uid == uid }
         }
 
@@ -24,7 +24,7 @@ func routes(_ app: Application) throws {
     }
 
     app.get("getSurveys") { req -> [Survey] in
-        if let surveys = app.data?.surveys {
+        if let surveys = await app.dataController?.surveys {
             return surveys
         }
 
@@ -33,7 +33,7 @@ func routes(_ app: Application) throws {
 
     app.post("createResponse") { req -> Response in
 
-        if app.data == nil {
+        if app.dataController == nil {
             req.logger.error("App.data is nil")
             throw Abort(.internalServerError, reason: "Unable to Load Server Data")
         }
@@ -43,9 +43,10 @@ func routes(_ app: Application) throws {
         }
         req.logger.info("Responses: \(surveyResponse.responses)")
 
-        if (app.data?.surveyResponses.append(surveyResponse)) == nil {
-            throw Abort(.internalServerError, reason: "Unable to add survey response to app data")
-        }
+//      FIX ME
+//        if (app.data?.surveyResponses.append(surveyResponse)) == nil {
+//            throw Abort(.internalServerError, reason: "Unable to add survey response to app data")
+//        }
 
         req.logger.info("Successfully Inserted SurveyResponse")
 
