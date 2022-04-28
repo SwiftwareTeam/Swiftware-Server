@@ -64,6 +64,10 @@ actor DataController {
         return try await data.storeSurveyResponse(response)
     }
 
+    func deleteResponse(id: UUID) async throws -> Bool {
+        return await data.deleteSurveyResponse(id: id)
+    }
+
     func backup() async throws -> Bool {
         let surveys = await data.filterSurveys({ _ in true })
         let surveyResponses = await data.filterSurveyResponses({ _ in true })

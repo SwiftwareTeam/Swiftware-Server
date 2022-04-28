@@ -122,4 +122,14 @@ actor ServerData {
         return try surveyResponses.filter(isIncluded)
     }
 
+    func deleteSurveyResponse(id: UUID) -> Bool {
+        for (index, response) in surveyResponses.enumerated() {
+            if response.id == id {
+                surveyResponses.remove(at: index)
+                return true
+            }
+        }
+        return false
+    }
+
 }

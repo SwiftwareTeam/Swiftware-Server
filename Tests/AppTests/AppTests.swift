@@ -38,4 +38,26 @@ final class AppTests: XCTestCase {
 
         })
     }
+
+    func testDeleteResponse() async throws {
+        let app = Application(.testing)
+        defer { app.shutdown() }
+        try configure(app)
+        let sampleData = SampleData()
+
+        let surveyResponse = sampleData.response
+
+        try app.test(.POST, "createResponse", beforeRequest: { req in
+            try req.content.encode(surveyResponse)
+        })
+
+        try app.test(.DELETE, "deleteResponse", beforeRequest: { req in
+            try req.content.encode(surveyResponse)
+        }, afterResponse: { resp in
+            XCTAssertEqual(resp.status, .ok)
+        })
+
+        let responseInDatabase: SurveyResponse? = try await app.dataController?.getSurveyResponse(id: surveyResponse.id)
+        XCTAssertNil(responseInDatabase)
+    }
 }
