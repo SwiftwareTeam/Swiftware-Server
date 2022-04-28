@@ -14,7 +14,6 @@ final class AppTests: XCTestCase {
         })
     }
 
-    // TODO: FIX TEST USING NEW DATA CONTROLLER
     func testCreateResponse() async throws {
         let app = Application(.testing)
         defer { app.shutdown() }

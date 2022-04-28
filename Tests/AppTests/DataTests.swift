@@ -8,7 +8,6 @@
 @testable import App
 import XCTVapor
 import XCTest
-import SwiftUI
 
 final class ServerDataTests : XCTestCase {
 

@@ -16,12 +16,6 @@ public func configure(_ app: Application) throws {
         try await app.dataController?.initialize()
     }
 
-
-
-
-
-
-
     // register routes
     try routes(app)
 }
