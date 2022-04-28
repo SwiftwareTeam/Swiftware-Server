@@ -69,13 +69,16 @@ actor DataController {
     }
 
     func deleteResponse(id: UUID) async throws -> Bool {
+        app.logger.critical("Data Controller: Atetmpting to delete")
         return await data.deleteSurveyResponse(id: id)
     }
 
     func backup() async throws -> Bool {
-        let surveys = await data.filterSurveys({ _ in true })
-        let surveyResponses = await data.filterSurveyResponses({ _ in true })
-        let snapshot = DataSnapshot(surveys: surveys, surveyResponses: surveyResponses)
+        app.logger.info("Getting list of surveys and responses")
+        async let surveys =  data.filterSurveys({ _ in true })
+        async let surveyResponses = data.filterSurveyResponses({ _ in true })
+        let snapshot = await DataSnapshot(surveys: surveys, surveyResponses: surveyResponses)
+        app.logger.info("Snapshot Created")
 
         if let success = try? await fileController.backup(snapshot: snapshot) {
             return success

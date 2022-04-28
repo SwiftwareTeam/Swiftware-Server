@@ -92,4 +92,23 @@ final class AppTests: XCTestCase {
         let responseInDatabase: SurveyResponse? = try await app.dataController?.getSurveyResponse(id: surveyResponse.id)
         XCTAssertNil(responseInDatabase)
     }
+    func testBackup() async throws {
+        let app = Application(.testing)
+        defer { app.shutdown() }
+        try configure(app)
+
+        try app.test(.GET, "backup", afterResponse: { resp in
+            XCTAssertEqual(resp.status, .ok)
+        })
+
+    }
+    func testLoadBackup() async throws {
+        let app = Application(.testing)
+        defer { app.shutdown() }
+        try configure(app)
+
+        try app.test(.GET, "loadBackup", afterResponse: { resp in
+            XCTAssertEqual(resp.status, .ok)
+        })
+    }
 }

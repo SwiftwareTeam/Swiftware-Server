@@ -269,6 +269,7 @@ actor FileController {
 
         do {
             JSONdata = try encoder.encode(snapshot)
+            app.logger.info("snapshot encoded")
         } catch let error {
             app.logger.report(error: error)
         }
@@ -276,6 +277,7 @@ actor FileController {
         let url = URL(string: jsonDir)!
 
         do {
+            app.logger.info("attempting write")
             try JSONdata.write(to: url)
             app.logger.info("Successfully exported data snapshot")
             return true
