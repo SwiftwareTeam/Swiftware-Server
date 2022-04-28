@@ -68,6 +68,7 @@ func routes(_ app: Application) throws {
             return Response(status: .ok)
         }
     }
+    
     app.delete("deleteResponse") { req -> Response in
         if app.dataController == nil {
             req.logger.error("Data Controller not Initialized")
@@ -84,7 +85,5 @@ func routes(_ app: Application) throws {
             throw Abort(.notFound, reason: "UUID Not Found in Response List")
         }
     }
-
-}
 
 }
