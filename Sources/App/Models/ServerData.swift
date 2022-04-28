@@ -41,14 +41,25 @@ actor ServerData {
      - Parameter newResponse: The new survey response to be inserted
      - Complexity: O(*n*) where *n* is the size of the survey response array
      */
-    func storeSurveyResponse(_ newResponse: SurveyResponse) throws {
+    func storeSurveyResponse(_ newResponse: SurveyResponse) throws -> Bool {
         for (index, existingResponse) in surveyResponses.enumerated() {
             if existingResponse.id == newResponse.id {
                 surveyResponses[index] = newResponse
-                return
             }
         }
         surveyResponses.append(newResponse)
+
+        return true
+    }
+
+    func writeSurveyResponses(_ responses: [SurveyResponse]) throws -> Bool {
+        self.surveyResponses = responses
+        return true
+    }
+
+    func writeSurveys(_ surveys: [Survey]) throws -> Bool {
+        self.surveys = surveys
+        return true
     }
 
         /**

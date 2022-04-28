@@ -14,7 +14,8 @@ final class AppTests: XCTestCase {
         })
     }
 
-    func testCreateResponse() throws {
+    // TODO: FIX TEST USING NEW DATA CONTROLLER
+    func testCreateResponse() async throws {
         let app = Application(.testing)
         defer { app.shutdown() }
         try configure(app)
@@ -25,12 +26,11 @@ final class AppTests: XCTestCase {
             try req.content.encode(surveyResponse)
         }, afterResponse: { res in
             XCTAssertEqual(res.status, .created)
-            // FIXME
-//            let responseInData: SurveyResponse? = app.data?.surveyResponses.first(where: {$0.id == surveyResponse.id})
-//
-//            XCTAssertNotNil(responseInData)
-//            XCTAssertEqual(surveyResponse, responseInData)
         })
+
+        if let responseFromController = try? await app.dataController?.getSurveyResponse(id: surveyResponse.id) {
+            XCTAssertEqual(responseFromController, surveyResponse)
+        }
 
         try app.test(.POST, "createResponse", beforeRequest: { req in
             try req.content.encode("Some Random String")
@@ -38,7 +38,5 @@ final class AppTests: XCTestCase {
             XCTAssertEqual(res.status, .badRequest)
 
         })
-
-
     }
 }

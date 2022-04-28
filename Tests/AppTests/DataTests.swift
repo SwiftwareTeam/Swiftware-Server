@@ -60,7 +60,21 @@ final class ServerDataTests : XCTestCase {
 }
 
 final class DataControllerTests : XCTestCase {
-    func testExample() {
-        XCTAssertTrue(true)
+    func testInitialize() async throws {
+        let app = Application(.testing)
+        defer { app.shutdown() }
+
+        let controller = DataController(app)
+
+        if let succeeded = try? await controller.initialize() {
+            XCTAssertTrue(succeeded)
+        }
+
+        guard let responses = try? await controller.getSurveyResponses(uid: "u00") else {
+            XCTFail()
+            return
+        }
+        XCTAssertGreaterThanOrEqual(responses.count, 2)
+        XCTAssertEqual(responses[0].uid, "u00")
     }
 }
