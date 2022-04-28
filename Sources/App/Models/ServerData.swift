@@ -17,6 +17,8 @@ actor ServerData {
     /// Array of Survey Responses
     private var surveyResponses = [SurveyResponse]()
 
+    let lock = NSLock()
+
     /**
      Inserts a Survey into the `ServerData.surveys` array. If a survey with
      the existing id already exists, the existing survey is overwritten.
@@ -57,7 +59,7 @@ actor ServerData {
         return true
     }
 
-    func writeSurveys(_ surveys: [Survey]) throws -> Bool {
+    func writeSurveys(_ surveys: [Survey]) async throws -> Bool {
         self.surveys = surveys
         return true
     }
@@ -92,10 +94,16 @@ actor ServerData {
      - Complexity: O(*n*) where *n* is the size of the survey response array
      */
     func firstSurveyResponse(where predicate: (SurveyResponse) throws -> Bool) rethrows -> SurveyResponse? {
+        var returnResponse: SurveyResponse? = nil
+        lock.lock()
         for response in surveyResponses {
-            if try predicate(response) { return response }
+            if try predicate(response) {
+                returnResponse = response
+                break
+            }
         }
-        return nil
+        lock.unlock()
+        return returnResponse
     }
 
     /**
@@ -123,13 +131,26 @@ actor ServerData {
     }
 
     func deleteSurveyResponse(id: UUID) -> Bool {
-        for (index, response) in surveyResponses.enumerated() {
+        lock.lock()
+        var mutableResponses = self.surveyResponses
+
+        var indexToRemove: Int = -1
+        for (index, response) in mutableResponses.enumerated() {
             if response.id == id {
-                surveyResponses.remove(at: index)
-                return true
+                indexToRemove = index
+                break
             }
         }
-        return false
+        if indexToRemove >= 0 {
+            print("Attempting to remove")
+            mutableResponses.remove(at: indexToRemove)
+            self.surveyResponses = mutableResponses
+            lock.unlock()
+            return true
+        } else {
+            lock.unlock()
+            return false
+        }
     }
 
 }

@@ -8,8 +8,6 @@ func routes(_ app: Application) throws {
     app.get("hello") { req -> String in
         return "Hello, world!"
     }
-    
-  // TODO: FIX EXISTING ROUTES TO USE NEW DATA CONTROLLER
 
     app.get("getResponses", ":uid") { req -> [SurveyResponse] in
         guard let uid = req.parameters.get("uid") else {
@@ -78,11 +76,27 @@ func routes(_ app: Application) throws {
         guard let surveyResponse = try? req.content.decode(SurveyResponse.self) else {
             throw Abort(.badRequest, reason: "Nota a valid UUID")
         }
-
+        app.logger.info("Attempting to Delete Response")
         if (try? await app.dataController?.deleteResponse(id: surveyResponse.id)) == true {
             return Response(status: .ok)
         } else {
             throw Abort(.notFound, reason: "UUID Not Found in Response List")
+        }
+    }
+
+    app.get("backup") { req -> Response in
+        if (try? await app.dataController?.backup()) == true {
+            return Response(status: .ok)
+        } else {
+            throw Abort(.internalServerError, reason: "Unable to perform backup")
+        }
+    }
+
+    app.get("loadBackup") { req -> Response in
+        if (try? await app.dataController?.loadBackup()) == true {
+            return Response(status: .ok)
+        } else {
+            throw Abort(.internalServerError, reason: "Unable to load backup")
         }
     }
 
