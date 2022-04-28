@@ -38,4 +38,36 @@ final class AppTests: XCTestCase {
 
         })
     }
+
+    func testUpdateResponse() async throws {
+        let app = Application(.testing)
+        defer { app.shutdown() }
+        try configure(app)
+        let sampleData = SampleData()
+
+        var surveyResponse = sampleData.response
+
+        try app.test(.POST, "createResponse", beforeRequest: { req in
+            try req.content.encode(surveyResponse)
+        }, afterResponse: { resp in
+            XCTAssertEqual(resp.status, .created)
+        })
+
+        surveyResponse.responses[1] = nil
+        surveyResponse.responses[2] = 3
+
+        try app.test(.PATCH, "updateResponse", beforeRequest: { req in
+            try req.content.encode(surveyResponse)
+        }, afterResponse: { resp in
+            XCTAssertEqual(resp.status, .ok)
+        })
+
+        if let survey = try await app.dataController?.getSurveyResponse(id: surveyResponse.id) {
+            XCTAssertEqual(survey.responses[1], nil)
+            XCTAssertEqual(survey.responses[2], 3)
+        } else {
+            XCTFail()
+        }
+
+    }
 }

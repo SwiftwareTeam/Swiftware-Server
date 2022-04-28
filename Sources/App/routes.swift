@@ -51,4 +51,22 @@ func routes(_ app: Application) throws {
 
     }
 
+    app.patch("updateResponse") { req -> Response in
+        if app.dataController == nil {
+            req.logger.error("Data Controller not Initialized")
+            throw Abort(.internalServerError, reason: "Unable to Load Server Data")
+        }
+
+        guard let surveyResponse = try? req.content.decode(SurveyResponse.self) else {
+            throw Abort(.badRequest, reason: "Not a valid Survey Response Object")
+        }
+
+        if (try? await app.dataController?.updateResponse(response: surveyResponse)) == nil {
+            throw Abort(.internalServerError, reason: "Unable to Update Survey Response in App Data")
+        } else {
+            req.logger.info("Successfully updated Survey Response")
+            return Response(status: .ok)
+        }
+    }
+
 }
