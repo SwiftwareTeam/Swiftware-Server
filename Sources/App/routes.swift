@@ -100,4 +100,18 @@ func routes(_ app: Application) throws {
         }
     }
 
+    app.get("avgResponseRate",":surveyID") { req -> [ChartData] in
+        guard let surveyIDString = req.parameters.get("surveyID") else {
+            throw Abort(.badRequest)
+        }
+        guard let surveyID = Int(surveyIDString) else {
+            throw Abort(.badRequest)
+        }
+
+        if let charts = app.dataController?.avgResponseRate(surveyID: surveyID) {
+            return charts
+        } else {
+            throw Abort(.internalServerError)
+        }
+    }
 }

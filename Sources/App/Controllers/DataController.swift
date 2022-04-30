@@ -113,6 +113,37 @@ class DataController {
         return false
     }
 
+    func avgResponseRate(surveyID: Int) -> [ChartData]? {
+        let responses = data.filterSurveyResponses() { $0.surveyID == surveyID && $0.responseType == "post" }
+        guard let survey = data.firstSurvey(where: {$0.id == surveyID}) else { return nil }
+        let questionCount = survey.questions.count
+        let answerCount = survey.answers.count
+
+
+        var counts = Dictionary(uniqueKeysWithValues: survey.answers.map { ($0.key, 0.0)})
+        var charts = [ChartData]()
+
+        for questionID in 1 ... questionCount {
+            counts = Dictionary(uniqueKeysWithValues: survey.answers.map { ($0.key, 0.0)})
+            for response in responses {
+                if let answerChoice = response.responses[questionID] {
+                    counts[answerChoice!]! += 1.0
+                }
+            }
+            let responseCount = responses.filter { $0.responses[questionID] != nil }.count
+            for answerID in 1 ... answerCount {
+                counts[answerID] = 100.0 * (counts[answerID]! / Double(responseCount))
+            }
+
+            let sortedCounts = counts.sorted(by: <)
+            charts.append(ChartData(surveyID: surveyID, questionID: questionID,
+                            dimensionName: "AnswerID", measureName: "AvgResponseRate",
+                                    dimensionValues: sortedCounts.map{$0.key},
+                                    measureValues: sortedCounts.map{$0.value}))
+        }
+        return charts
+    }
+
 }
 
 struct MyConfigurationKey: StorageKey {
