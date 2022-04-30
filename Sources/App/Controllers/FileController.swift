@@ -80,7 +80,7 @@ class FileController {
                     // remove whitespace from the string. Finally, append results to the data array
 
                     let lineArray = line.components(separatedBy: ",").map { str in
-                        return str.filter {!$0.isWhitespace }
+                        return str.filter {!$0.isNewline }
                     }
 
                     dataArray.append(lineArray)
@@ -142,7 +142,7 @@ class FileController {
                   // remove whitespace from the string. Finally, append results to the data array
 
                   let lineArray = line.components(separatedBy: ",").map { str in
-                      return str.filter {!$0.isWhitespace }
+                      return str.filter {!$0.isNewline }
                   }
 
                   dataArray.append(lineArray)
@@ -207,7 +207,7 @@ class FileController {
                   // remove whitespace from the string. Finally, append results to the data array
 
                   let lineArray = line.components(separatedBy: ",").map { str in
-                      return str.filter {!$0.isWhitespace }
+                      return str.filter {!$0.isNewline }
                   }
 
                   dataArray.append(lineArray)

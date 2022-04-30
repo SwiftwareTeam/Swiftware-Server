@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "date" : 672994964.631585,
+=======
+  "date" : 672981971.31903303,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
   "surveys" : [
     {
       "group" : "I see myself as",
@@ -7,27 +11,47 @@
       "answers" : {
         "3" : {
           "id" : 3,
+<<<<<<< HEAD
           "label" : "NeitherAgreenorDisagree",
+=======
+          "label" : "Neither Agree nor Disagree",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
           "value" : 3
         },
         "1" : {
           "id" : 1,
+<<<<<<< HEAD
           "label" : "DisagreeStrongly",
+=======
+          "label" : "Disagree Strongly",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
           "value" : 1
         },
         "4" : {
           "id" : 4,
+<<<<<<< HEAD
           "label" : "AgreeaLittle",
+=======
+          "label" : "Agree a Little",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
           "value" : 4
         },
         "2" : {
           "id" : 2,
+<<<<<<< HEAD
           "label" : "DisagreeaLittle",
+=======
+          "label" : "Disagree a Little",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
           "value" : 2
         },
         "5" : {
           "id" : 5,
+<<<<<<< HEAD
           "label" : "AgreeStrongly",
+=======
+          "label" : "Agree Strongly",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
           "value" : 5
         }
       },
@@ -36,221 +60,403 @@
         "3" : {
           "id" : 3,
           "shortWording" : "Thorough",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhodoesathoroughjob"
+=======
+          "fullWording" : "I see myself as someone who does a thorough job"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "12" : {
           "id" : 12,
           "shortWording" : "Quarrelsome",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhostartsquarrelswithothers"
+=======
+          "fullWording" : "I see myself as someone who starts quarrels with others"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "21" : {
           "id" : 21,
           "shortWording" : "Quiet",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhotendstobequiet"
+=======
+          "fullWording" : "I see myself as someone who tends to be quiet"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "4" : {
           "id" : 4,
           "shortWording" : "Depressed",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhoisdepressed-blue"
+=======
+          "fullWording" : "I see myself as someone who is depressed - blue"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "30" : {
           "id" : 30,
           "shortWording" : "Artisitic",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhovaluesartistic-aestheticexperiences"
         },
         "13" : {
           "id" : 13,
           "shortWording" : "Reliable",
           "fullWording" : "Iseemyselfassomeonewhoisareliableworker"
+=======
+          "fullWording" : "I see myself as someone who values artistic - aesthetic experiences"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "5" : {
           "id" : 5,
           "shortWording" : "Original",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhoisoriginal-comesupwithnewideas"
+=======
+          "fullWording" : "I see myself as someone who is original - comes up with new ideas"
+        },
+        "13" : {
+          "id" : 13,
+          "shortWording" : "Reliable",
+          "fullWording" : "I see myself as someone who is a reliable worker"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "22" : {
           "id" : 22,
           "shortWording" : "Trusting",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhoisgenerallytrusting"
+=======
+          "fullWording" : "I see myself as someone who is generally trusting"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "6" : {
           "id" : 6,
           "shortWording" : "Reserved",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhoisreserved"
+=======
+          "fullWording" : "I see myself as someone who is reserved"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "31" : {
           "id" : 31,
           "shortWording" : "Shy",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhoissometimesshy-inhibited"
+=======
+          "fullWording" : "I see myself as someone who is sometimes shy -  inhibited"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "14" : {
           "id" : 14,
           "shortWording" : "Tense",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhocanbetense"
+=======
+          "fullWording" : "I see myself as someone who can be tense"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "40" : {
           "id" : 40,
           "shortWording" : "Reflective",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewholikestoreflect-playwithideas"
         },
         "23" : {
           "id" : 23,
           "shortWording" : "Lazy",
           "fullWording" : "Iseemyselfassomeonewhotendstobelazy"
+=======
+          "fullWording" : "I see myself as someone who likes to reflect - play with ideas"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "7" : {
           "id" : 7,
           "shortWording" : "Helpful",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhoishelpfulandunselfishwithothers"
+=======
+          "fullWording" : "I see myself as someone who is helpful and unselfish with others"
+        },
+        "23" : {
+          "id" : 23,
+          "shortWording" : "Lazy",
+          "fullWording" : "I see myself as someone who tends to be lazy"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "32" : {
           "id" : 32,
           "shortWording" : "Considerate",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhoisconsiderateandkindtoalmosteveryone"
+=======
+          "fullWording" : "I see myself as someone who is considerate and kind to almost everyone"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "15" : {
           "id" : 15,
           "shortWording" : "Ingenious",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhoisingenious-adeepthinker"
+=======
+          "fullWording" : "I see myself as someone who is ingenious - a deep thinker"
+        },
+        "41" : {
+          "id" : 41,
+          "shortWording" : "Unartistic",
+          "fullWording" : "I see myself as someone who has few artistic interests"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "8" : {
           "id" : 8,
           "shortWording" : "Careless",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhocanbesomewhatcareless"
         },
         "24" : {
           "id" : 24,
           "shortWording" : "EmotionallyStable",
           "fullWording" : "Iseemyselfassomeonewhoisemotionallystable-noteasilyupset"
+=======
+          "fullWording" : "I see myself as someone who can be somewhat careless"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "9" : {
           "id" : 9,
           "shortWording" : "Relaxed",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhoisrelaxed-handlesstresswell"
+=======
+          "fullWording" : "I see myself as someone who is relaxed - handles stress well"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "33" : {
           "id" : 33,
           "shortWording" : "Efficient",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhodoesthingsefficiently"
+=======
+          "fullWording" : "I see myself as someone who does things efficiently"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "16" : {
           "id" : 16,
           "shortWording" : "Enthusiastic",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhogeneratesalotofenthusiasm"
         },
         "42" : {
           "id" : 42,
           "shortWording" : "Cooperative",
           "fullWording" : "Iseemyselfassomeonewholikestocooperatewithothers"
+=======
+          "fullWording" : "I see myself as someone who generates a lot of enthusiasm"
+        },
+        "24" : {
+          "id" : 24,
+          "shortWording" : "Emotionally Stable",
+          "fullWording" : "I see myself as someone who is emotionally stable - not easily upset"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "25" : {
           "id" : 25,
           "shortWording" : "Inventive",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhoisinventive"
         },
         "41" : {
           "id" : 41,
           "shortWording" : "Unartistic",
           "fullWording" : "Iseemyselfassomeonewhohasfewartisticinterests"
+=======
+          "fullWording" : "I see myself as someone who is inventive"
+        },
+        "42" : {
+          "id" : 42,
+          "shortWording" : "Cooperative",
+          "fullWording" : "I see myself as someone who likes to cooperate with others"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "34" : {
           "id" : 34,
           "shortWording" : "Unflappable",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhoremainscalmintensesituations"
+=======
+          "fullWording" : "I see myself as someone who remains calm in tense situations"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "17" : {
           "id" : 17,
           "shortWording" : "Forigiving",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhohasaforgivingnature"
+=======
+          "fullWording" : "I see myself as someone who has a forgiving nature"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "43" : {
           "id" : 43,
           "shortWording" : "Distracted",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhoiseasilydistracted"
+=======
+          "fullWording" : "I see myself as someone who is easily distracted"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "26" : {
           "id" : 26,
           "shortWording" : "Assertive",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhohasanassertivepersonality"
         },
         "35" : {
           "id" : 35,
           "shortWording" : "PreferringRoutine",
           "fullWording" : "Iseemyselfassomeonewhoprefersworkthatisroutine"
+=======
+          "fullWording" : "I see myself as someone who has an assertive personality"
+        },
+        "35" : {
+          "id" : 35,
+          "shortWording" : "Preferring Routine",
+          "fullWording" : "I see myself as someone who prefers work that is routine"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "18" : {
           "id" : 18,
           "shortWording" : "Disorganized",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhotendstobedisorganized"
         },
         "44" : {
           "id" : 44,
           "shortWording" : "ArtisticallySophisticated",
           "fullWording" : "Iseemyselfassomeonewhoissophisticatedinartmusicorliterature"
+=======
+          "fullWording" : "I see myself as someone who tends to be disorganized"
+        },
+        "44" : {
+          "id" : 44,
+          "shortWording" : "Artistically Sophisticated",
+          "fullWording" : "I see myself as someone who is sophisticated in art music or literature"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "27" : {
           "id" : 27,
           "shortWording" : "Cold",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhocanbecoldandaloof"
+=======
+          "fullWording" : "I see myself as someone who can be cold and aloof"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "36" : {
           "id" : 36,
           "shortWording" : "Outgoing",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhoisoutgoing-sociable"
+=======
+          "fullWording" : "I see myself as someone who is outgoing - sociable"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "19" : {
           "id" : 19,
           "shortWording" : "Worrisome",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhoworriesalot"
+=======
+          "fullWording" : "I see myself as someone who worries a lot"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "28" : {
           "id" : 28,
           "shortWording" : "Persevering",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhoperseveresuntilthetaskisfinished"
+=======
+          "fullWording" : "I see myself as someone who perseveres until the task is finished"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "37" : {
           "id" : 37,
           "shortWording" : "Rude",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhoissometimesrudetoothers"
+=======
+          "fullWording" : "I see myself as someone who is sometimes rude to others"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "29" : {
           "id" : 29,
           "shortWording" : "Moody",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhocanbemoody"
         },
         "38" : {
           "id" : 38,
           "shortWording" : "APlanKeeper",
           "fullWording" : "Iseemyselfassomeonewhomakesplansandfollowsthroughwiththem"
+=======
+          "fullWording" : "I see myself as someone who can be moody"
+        },
+        "38" : {
+          "id" : 38,
+          "shortWording" : "A Plan Keeper",
+          "fullWording" : "I see myself as someone who makes plans and follows through with them"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "39" : {
           "id" : 39,
           "shortWording" : "Nervous",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhogetsnervouseasily"
+=======
+          "fullWording" : "I see myself as someone who gets nervous easily"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "10" : {
           "id" : 10,
           "shortWording" : "Curious",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhoiscuriousaboutmanydifferentthings"
+=======
+          "fullWording" : "I see myself as someone who is curious about many different things"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "1" : {
           "id" : 1,
           "shortWording" : "Talkative",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhoistalkative"
+=======
+          "fullWording" : "I see myself as someone who is talkative"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "11" : {
           "id" : 11,
           "shortWording" : "Energetic",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhoisfullofenergy"
         },
         "2" : {
           "id" : 2,
           "shortWording" : "AFaultFinder",
           "fullWording" : "Iseemyselfassomeonewhotendstofindfaultwithothers"
+=======
+          "fullWording" : "I see myself as someone who is full of energy"
+        },
+        "2" : {
+          "id" : 2,
+          "shortWording" : "A Fault Finder",
+          "fullWording" : "I see myself as someone who tends to find fault with others"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         },
         "20" : {
           "id" : 20,
           "shortWording" : "Imaginative",
+<<<<<<< HEAD
           "fullWording" : "Iseemyselfassomeonewhohasanactiveimagination"
         }
       }
@@ -747,6 +953,9 @@
           "id" : 2,
           "shortWording" : "Depressed",
           "fullWording" : "Overthepast2weekshowoftenhaveyoubeenbotheredbyfeelingdown-depressed-hopeless."
+=======
+          "fullWording" : "I see myself as someone who has an active imagination"
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         }
       }
     }
@@ -754,13 +963,22 @@
   "surveyResponses" : [
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "4D5468EA-6912-479D-B5BE-BBA991252248",
+=======
+      "id" : "BC69CA3E-0E0B-402D-8EE0-8CE91E956B9C",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u00",
       "responses" : {
         "3" : 3,
         "12" : 3,
+<<<<<<< HEAD
         "4" : 3,
         "21" : 3,
+=======
+        "21" : 3,
+        "4" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "30" : 5,
         "13" : 5,
         "5" : 5,
@@ -768,6 +986,7 @@
         "6" : 4,
         "31" : 4,
         "14" : 4,
+<<<<<<< HEAD
         "40" : 5,
         "23" : 2,
         "7" : 4,
@@ -781,6 +1000,21 @@
         "42" : 4,
         "25" : 5,
         "32" : 4,
+=======
+        "7" : 4,
+        "23" : 2,
+        "40" : 5,
+        "32" : 4,
+        "15" : 4,
+        "41" : 2,
+        "8" : 4,
+        "24" : 3,
+        "9" : 4,
+        "16" : 4,
+        "42" : 4,
+        "33" : 2,
+        "25" : 5,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 3,
         "17" : 4,
         "43" : 4,
@@ -806,13 +1040,22 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "809D639C-D048-4AD9-BBCE-2269030ADE44",
+=======
+      "id" : "F9767376-9CAA-46D3-80D8-F082E0D3ED5C",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u01",
       "responses" : {
         "3" : 5,
         "12" : 1,
+<<<<<<< HEAD
         "21" : 5,
         "4" : 5,
+=======
+        "4" : 5,
+        "21" : 5,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "30" : 2,
         "13" : 5,
         "5" : 4,
@@ -821,6 +1064,7 @@
         "31" : 4,
         "14" : 3,
         "40" : 4,
+<<<<<<< HEAD
         "23" : 3,
         "7" : 5,
         "32" : 5,
@@ -833,6 +1077,20 @@
         "42" : 3,
         "25" : 3,
         "41" : 3,
+=======
+        "7" : 5,
+        "23" : 3,
+        "32" : 5,
+        "15" : 5,
+        "41" : 3,
+        "24" : 3,
+        "9" : 4,
+        "33" : 5,
+        "16" : 4,
+        "42" : 3,
+        "8" : 2,
+        "25" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 5,
         "17" : 4,
         "43" : 3,
@@ -858,7 +1116,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "490B6053-7D78-4E08-A9E5-BF263382AA94",
+=======
+      "id" : "0DA59E69-A389-4866-A9B6-202517A67013",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u02",
       "responses" : {
         "3" : 4,
@@ -876,10 +1138,17 @@
         "7" : 4,
         "23" : 3,
         "32" : 3,
+<<<<<<< HEAD
         "15" : 2,
         "41" : 3,
         "8" : 2,
         "9" : 2,
+=======
+        "8" : 2,
+        "41" : 3,
+        "9" : 2,
+        "15" : 2,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "33" : 5,
         "16" : 1,
         "42" : 4,
@@ -910,7 +1179,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "7A00139D-F0AD-4E41-87AF-BE8A33ABC237",
+=======
+      "id" : "333C5E44-EBBD-4D88-A521-B921A4D989D8",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u03",
       "responses" : {
         "3" : 4,
@@ -929,6 +1202,7 @@
         "7" : 3,
         "32" : 2,
         "15" : 4,
+<<<<<<< HEAD
         "41" : 3,
         "9" : 3,
         "8" : 2,
@@ -937,6 +1211,16 @@
         "42" : 2,
         "33" : 4,
         "25" : 3,
+=======
+        "8" : 2,
+        "24" : 3,
+        "41" : 3,
+        "33" : 4,
+        "16" : 3,
+        "42" : 2,
+        "25" : 3,
+        "9" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 2,
         "43" : 2,
@@ -962,7 +1246,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "AD60C12A-9500-41CF-850D-B04821043139",
+=======
+      "id" : "3D85370D-88C6-4A87-BA28-9A97270F23D5",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u04",
       "responses" : {
         "3" : 4,
@@ -977,6 +1265,7 @@
         "31" : 4,
         "14" : 5,
         "7" : 4,
+<<<<<<< HEAD
         "23" : 2,
         "40" : 4,
         "32" : 4,
@@ -989,6 +1278,20 @@
         "42" : 4,
         "25" : 3,
         "16" : 4,
+=======
+        "40" : 4,
+        "23" : 2,
+        "32" : 4,
+        "15" : 2,
+        "41" : 3,
+        "24" : 1,
+        "9" : 1,
+        "33" : 2,
+        "16" : 4,
+        "8" : 4,
+        "25" : 3,
+        "42" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 1,
         "17" : 1,
         "43" : 5,
@@ -1014,21 +1317,34 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "4DAE89D3-D95E-4476-8AB7-8E8B0182D52F",
+=======
+      "id" : "CFBE8120-D96A-4416-9724-CB02521BAA1A",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u05",
       "responses" : {
         "3" : 5,
         "12" : 1,
+<<<<<<< HEAD
         "21" : 4,
         "4" : 1,
         "30" : 3,
         "13" : 5,
         "5" : 3,
+=======
+        "4" : 1,
+        "21" : 4,
+        "30" : 3,
+        "5" : 3,
+        "13" : 5,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 3,
         "6" : 4,
         "31" : 3,
         "14" : 3,
         "40" : 3,
+<<<<<<< HEAD
         "7" : 4,
         "23" : 3,
         "32" : 4,
@@ -1041,6 +1357,20 @@
         "42" : 3,
         "25" : 4,
         "24" : 4,
+=======
+        "23" : 3,
+        "7" : 4,
+        "32" : 4,
+        "15" : 3,
+        "41" : 2,
+        "8" : 1,
+        "24" : 4,
+        "33" : 4,
+        "9" : 4,
+        "42" : 3,
+        "25" : 4,
+        "16" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 4,
         "43" : 3,
@@ -1066,24 +1396,42 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "2E9D7715-B033-4BEE-B725-E23D6B7FA1D0",
+=======
+      "id" : "8786146D-013E-44C1-B71B-840CAC2F42FD",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u07",
       "responses" : {
         "3" : 4,
         "12" : 2,
+<<<<<<< HEAD
         "4" : 3,
         "21" : 3,
         "30" : 2,
         "13" : 4,
         "5" : 2,
+=======
+        "21" : 3,
+        "4" : 3,
+        "30" : 2,
+        "5" : 2,
+        "13" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 5,
         "6" : 3,
         "31" : 2,
         "14" : 4,
         "40" : 3,
+<<<<<<< HEAD
         "23" : 3,
         "7" : 4,
         "32" : 4,
+=======
+        "7" : 4,
+        "23" : 3,
+        "8" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "15" : 4,
         "41" : 2,
         "24" : 2,
@@ -1092,7 +1440,11 @@
         "16" : 3,
         "42" : 2,
         "25" : 4,
+<<<<<<< HEAD
         "8" : 4,
+=======
+        "32" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 5,
         "43" : 4,
@@ -1118,16 +1470,28 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "95BDAFC0-2B32-487B-9105-C58D879D1D2D",
+=======
+      "id" : "7A51AA34-94E3-428E-8496-6CC5F26C88C8",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u09",
       "responses" : {
         "3" : 4,
         "12" : 1,
+<<<<<<< HEAD
         "21" : 4,
         "4" : 1,
         "30" : 3,
         "13" : 4,
         "5" : 4,
+=======
+        "4" : 1,
+        "21" : 4,
+        "30" : 3,
+        "5" : 4,
+        "13" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 5,
         "6" : 5,
         "31" : 4,
@@ -1136,6 +1500,7 @@
         "23" : 3,
         "7" : 5,
         "32" : 5,
+<<<<<<< HEAD
         "8" : 4,
         "41" : 2,
         "9" : 3,
@@ -1145,6 +1510,17 @@
         "42" : 4,
         "25" : 4,
         "16" : 4,
+=======
+        "15" : 4,
+        "41" : 2,
+        "24" : 5,
+        "9" : 3,
+        "33" : 5,
+        "16" : 4,
+        "42" : 4,
+        "25" : 4,
+        "8" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 5,
         "17" : 5,
         "43" : 4,
@@ -1170,7 +1546,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "854EE0CB-55A1-4B0F-8E55-4468DB700F8A",
+=======
+      "id" : "8FB35131-27D2-431C-995B-4529D1FA7BDA",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u10",
       "responses" : {
         "3" : 5,
@@ -1178,8 +1558,13 @@
         "21" : 5,
         "4" : 2,
         "30" : 1,
+<<<<<<< HEAD
         "5" : 5,
         "13" : 5,
+=======
+        "13" : 5,
+        "5" : 5,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 3,
         "6" : 5,
         "31" : 4,
@@ -1187,6 +1572,7 @@
         "40" : 4,
         "23" : 1,
         "7" : 1,
+<<<<<<< HEAD
         "8" : 1,
         "15" : 5,
         "41" : 1,
@@ -1197,6 +1583,18 @@
         "42" : 1,
         "25" : 4,
         "32" : 1,
+=======
+        "32" : 1,
+        "15" : 5,
+        "41" : 1,
+        "24" : 3,
+        "8" : 1,
+        "33" : 5,
+        "9" : 4,
+        "42" : 1,
+        "16" : 3,
+        "25" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 3,
         "17" : 1,
         "43" : 1,
@@ -1222,7 +1620,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "55E3D951-CFAF-4346-A628-55EFC6DD6F3B",
+=======
+      "id" : "0CC3F3A9-93E0-42F0-AC4A-00EE7541A74C",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u14",
       "responses" : {
         "3" : 5,
@@ -1239,16 +1641,28 @@
         "7" : 4,
         "23" : 3,
         "40" : 4,
+<<<<<<< HEAD
         "8" : 3,
         "15" : 3,
         "32" : 5,
         "9" : 4,
         "24" : 5,
+=======
+        "32" : 5,
+        "15" : 3,
+        "41" : 4,
+        "24" : 5,
+        "9" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "33" : 4,
         "16" : 4,
         "42" : 4,
         "25" : 4,
+<<<<<<< HEAD
         "41" : 4,
+=======
+        "8" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 5,
         "17" : 4,
         "43" : 3,
@@ -1274,13 +1688,22 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "839B060C-01F5-4FC8-BF83-8483DF1EF4AB",
+=======
+      "id" : "F8D2B913-2FA5-416C-921B-E6A26EBD9BFF",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u15",
       "responses" : {
         "3" : 4,
         "12" : 2,
+<<<<<<< HEAD
         "21" : 3,
         "4" : 1,
+=======
+        "4" : 1,
+        "21" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "30" : 3,
         "13" : 4,
         "5" : 4,
@@ -1288,6 +1711,7 @@
         "6" : 3,
         "31" : 3,
         "14" : 3,
+<<<<<<< HEAD
         "7" : 4,
         "23" : 4,
         "40" : 2,
@@ -1296,11 +1720,25 @@
         "8" : 4,
         "24" : 4,
         "41" : 4,
+=======
+        "40" : 2,
+        "23" : 4,
+        "7" : 4,
+        "32" : 3,
+        "15" : 3,
+        "41" : 4,
+        "9" : 4,
+        "24" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "33" : 4,
         "16" : 3,
         "42" : 3,
         "25" : 4,
+<<<<<<< HEAD
         "9" : 4,
+=======
+        "8" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 4,
         "43" : 3,
@@ -1326,20 +1764,33 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "C5F34A26-4DBD-466F-93A1-79D25D91EDE0",
+=======
+      "id" : "26287BFC-D6B4-4E61-8289-7E2669DAEF3A",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u16",
       "responses" : {
         "3" : 4,
         "12" : 1,
+<<<<<<< HEAD
         "4" : 4,
         "21" : 5,
         "30" : 5,
         "5" : 4,
         "13" : 4,
+=======
+        "21" : 5,
+        "4" : 4,
+        "30" : 5,
+        "13" : 4,
+        "5" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 2,
         "6" : 5,
         "31" : 5,
         "14" : 4,
+<<<<<<< HEAD
         "40" : 5,
         "7" : 3,
         "23" : 4,
@@ -1353,6 +1804,21 @@
         "42" : 4,
         "25" : 3,
         "33" : 3,
+=======
+        "7" : 3,
+        "23" : 4,
+        "40" : 5,
+        "32" : 4,
+        "8" : 4,
+        "41" : 2,
+        "24" : 2,
+        "9" : 2,
+        "33" : 3,
+        "16" : 3,
+        "42" : 4,
+        "25" : 3,
+        "15" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 3,
         "17" : 4,
         "43" : 4,
@@ -1378,7 +1844,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "0A226122-F861-43D4-8547-6F0FC9E37A4B",
+=======
+      "id" : "94DBE101-A234-4159-AC1C-77D597D0C0B4",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u17",
       "responses" : {
         "3" : 4,
@@ -1386,12 +1856,18 @@
         "21" : 5,
         "4" : 4,
         "30" : 5,
+<<<<<<< HEAD
         "5" : 5,
         "13" : 4,
+=======
+        "13" : 4,
+        "5" : 5,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 5,
         "6" : 5,
         "31" : 2,
         "14" : 5,
+<<<<<<< HEAD
         "40" : 5,
         "23" : 3,
         "7" : 5,
@@ -1400,6 +1876,16 @@
         "41" : 1,
         "9" : 2,
         "32" : 5,
+=======
+        "7" : 5,
+        "40" : 5,
+        "23" : 3,
+        "32" : 5,
+        "15" : 4,
+        "41" : 1,
+        "8" : 4,
+        "9" : 2,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "33" : 3,
         "16" : 3,
         "42" : 4,
@@ -1430,7 +1916,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "23189DB9-64F3-4C88-83B3-D90364161ECB",
+=======
+      "id" : "33852053-52C6-45BB-8B89-89B7F59EEFD3",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u18",
       "responses" : {
         "3" : 3,
@@ -1438,8 +1928,13 @@
         "21" : 4,
         "4" : 4,
         "30" : 2,
+<<<<<<< HEAD
         "5" : 3,
         "13" : 3,
+=======
+        "13" : 3,
+        "5" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 1,
         "6" : 3,
         "31" : 3,
@@ -1481,7 +1976,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "06899449-E777-4043-A095-F83D1B73BB00",
+=======
+      "id" : "E764FC12-2827-437F-87BB-5271A5E68B2B",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u19",
       "responses" : {
         "3" : 5,
@@ -1496,6 +1995,7 @@
         "31" : 5,
         "14" : 4,
         "40" : 4,
+<<<<<<< HEAD
         "7" : 4,
         "23" : 2,
         "32" : 4,
@@ -1503,11 +2003,24 @@
         "41" : 2,
         "8" : 4,
         "9" : 2,
+=======
+        "23" : 2,
+        "7" : 4,
+        "32" : 4,
+        "15" : 4,
+        "41" : 2,
+        "9" : 2,
+        "24" : 2,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "33" : 3,
         "16" : 4,
         "42" : 4,
         "25" : 4,
+<<<<<<< HEAD
         "24" : 2,
+=======
+        "8" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 3,
         "17" : 4,
         "43" : 2,
@@ -1533,13 +2046,22 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "17A24058-F9F5-4495-BC05-D6E93B118D1B",
+=======
+      "id" : "6223E418-71FF-43B3-86AE-478C4B27B71F",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u20",
       "responses" : {
         "3" : 4,
         "12" : 1,
+<<<<<<< HEAD
         "21" : 3,
         "4" : 3,
+=======
+        "4" : 3,
+        "21" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "30" : 3,
         "13" : 4,
         "5" : 4,
@@ -1554,12 +2076,21 @@
         "8" : 3,
         "41" : 4,
         "9" : 3,
+<<<<<<< HEAD
         "24" : 5,
         "33" : 3,
         "16" : 4,
         "42" : 3,
         "25" : 4,
         "15" : 3,
+=======
+        "15" : 3,
+        "33" : 3,
+        "16" : 4,
+        "24" : 5,
+        "25" : 4,
+        "42" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 5,
         "43" : 3,
@@ -1585,7 +2116,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "168387F6-84E1-4C84-B869-3A23436597F0",
+=======
+      "id" : "CAB3E48B-2454-4D6A-A49D-17A4297B8FA9",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u23",
       "responses" : {
         "3" : 4,
@@ -1602,7 +2137,11 @@
         "7" : 4,
         "23" : 2,
         "32" : 4,
+<<<<<<< HEAD
         "15" : 5,
+=======
+        "8" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "41" : 4,
         "24" : 4,
         "9" : 1,
@@ -1610,7 +2149,11 @@
         "16" : 5,
         "42" : 5,
         "25" : 5,
+<<<<<<< HEAD
         "8" : 4,
+=======
+        "15" : 5,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 2,
         "17" : 4,
         "43" : 4,
@@ -1635,7 +2178,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "08F30907-0D0B-4434-90FD-88A88D0F849E",
+=======
+      "id" : "975E4BF4-8298-4435-9CDD-398CE136753F",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u24",
       "responses" : {
         "3" : 3,
@@ -1649,6 +2196,7 @@
         "6" : 3,
         "31" : 4,
         "14" : 4,
+<<<<<<< HEAD
         "7" : 3,
         "23" : 4,
         "40" : 3,
@@ -1657,11 +2205,25 @@
         "41" : 2,
         "24" : 4,
         "9" : 3,
+=======
+        "40" : 3,
+        "23" : 4,
+        "7" : 3,
+        "32" : 4,
+        "15" : 4,
+        "41" : 2,
+        "8" : 4,
+        "24" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "33" : 5,
         "16" : 4,
         "42" : 3,
         "25" : 5,
+<<<<<<< HEAD
         "32" : 4,
+=======
+        "9" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 4,
         "43" : 5,
@@ -1687,7 +2249,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "B799E322-F5CF-4C67-8CC5-753189654BDB",
+=======
+      "id" : "CFE97840-2B58-48DA-A033-8A508AFD59A4",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u27",
       "responses" : {
         "3" : 3,
@@ -1701,6 +2267,7 @@
         "6" : 5,
         "31" : 4,
         "14" : 2,
+<<<<<<< HEAD
         "40" : 4,
         "23" : 3,
         "7" : 4,
@@ -1709,11 +2276,25 @@
         "8" : 4,
         "9" : 3,
         "24" : 3,
+=======
+        "7" : 4,
+        "23" : 3,
+        "40" : 4,
+        "8" : 4,
+        "32" : 4,
+        "41" : 2,
+        "24" : 3,
+        "15" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "33" : 3,
         "16" : 3,
         "42" : 3,
         "25" : 3,
+<<<<<<< HEAD
         "41" : 2,
+=======
+        "9" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 3,
         "17" : 4,
         "43" : 4,
@@ -1739,7 +2320,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "15386101-1354-461C-B254-D4825B4D6037",
+=======
+      "id" : "1EAB50BA-ACB7-452A-B4F4-2E9D56842546",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u30",
       "responses" : {
         "3" : 5,
@@ -1759,6 +2344,7 @@
         "32" : 4,
         "15" : 4,
         "41" : 3,
+<<<<<<< HEAD
         "8" : 2,
         "9" : 3,
         "24" : 4,
@@ -1766,6 +2352,15 @@
         "42" : 4,
         "25" : 4,
         "33" : 4,
+=======
+        "24" : 4,
+        "9" : 3,
+        "33" : 4,
+        "16" : 5,
+        "42" : 4,
+        "25" : 4,
+        "8" : 2,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 3,
         "43" : 2,
@@ -1791,7 +2386,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "F814C813-F3F0-4914-8E0E-AD42D3531339",
+=======
+      "id" : "B36F3122-2B38-4AC1-9275-19FD0AA6D5F2",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u31",
       "responses" : {
         "3" : 5,
@@ -1808,16 +2407,28 @@
         "40" : 3,
         "23" : 4,
         "7" : 2,
+<<<<<<< HEAD
         "32" : 3,
         "15" : 4,
         "41" : 5,
         "8" : 2,
+=======
+        "8" : 2,
+        "32" : 3,
+        "41" : 5,
+        "24" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "9" : 4,
         "33" : 4,
         "16" : 3,
         "42" : 4,
+<<<<<<< HEAD
         "24" : 3,
         "25" : 3,
+=======
+        "25" : 3,
+        "15" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 2,
         "17" : 3,
         "43" : 5,
@@ -1842,20 +2453,33 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "399CA5BB-80B5-41B6-9D5C-28F5AACBCB76",
+=======
+      "id" : "FBD266EE-FA88-411F-A773-B0318429D0BA",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u32",
       "responses" : {
         "3" : 5,
         "12" : 1,
+<<<<<<< HEAD
         "4" : 1,
         "21" : 2,
         "30" : 4,
         "5" : 4,
         "13" : 5,
+=======
+        "21" : 2,
+        "4" : 1,
+        "30" : 4,
+        "13" : 5,
+        "5" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 4,
         "6" : 3,
         "31" : 2,
         "14" : 2,
+<<<<<<< HEAD
         "7" : 4,
         "23" : 4,
         "40" : 4,
@@ -1869,6 +2493,21 @@
         "42" : 5,
         "25" : 4,
         "16" : 5,
+=======
+        "40" : 4,
+        "23" : 4,
+        "7" : 4,
+        "32" : 4,
+        "15" : 4,
+        "41" : 3,
+        "9" : 5,
+        "24" : 5,
+        "33" : 5,
+        "16" : 5,
+        "8" : 1,
+        "25" : 4,
+        "42" : 5,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 5,
         "17" : 4,
         "43" : 2,
@@ -1894,13 +2533,22 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "6F250B3C-5560-4516-95B0-77DDB87EE267",
+=======
+      "id" : "69BD0E23-E26F-492F-AB0D-A9BB8013EA53",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u33",
       "responses" : {
         "3" : 4,
         "12" : 1,
+<<<<<<< HEAD
         "21" : 3,
         "4" : 4,
+=======
+        "4" : 4,
+        "21" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "30" : 5,
         "13" : 2,
         "5" : 5,
@@ -1908,6 +2556,7 @@
         "6" : 2,
         "31" : 5,
         "14" : 4,
+<<<<<<< HEAD
         "7" : 4,
         "23" : 4,
         "40" : 5,
@@ -1915,6 +2564,15 @@
         "15" : 3,
         "41" : 1,
         "8" : 4,
+=======
+        "40" : 5,
+        "23" : 4,
+        "7" : 4,
+        "8" : 4,
+        "32" : 5,
+        "41" : 1,
+        "15" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "24" : 3,
         "33" : 3,
         "16" : 3,
@@ -1946,13 +2604,22 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "40783C23-F6AD-465E-9764-893B56C99594",
+=======
+      "id" : "553320D4-3FF8-462F-8EE3-2A5790E00A82",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u34",
       "responses" : {
         "3" : 4,
         "12" : 3,
+<<<<<<< HEAD
         "21" : 4,
         "4" : 1,
+=======
+        "4" : 1,
+        "21" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "30" : 2,
         "13" : 5,
         "5" : 4,
@@ -1960,6 +2627,7 @@
         "6" : 3,
         "31" : 4,
         "14" : 4,
+<<<<<<< HEAD
         "7" : 5,
         "23" : 4,
         "40" : 4,
@@ -1968,11 +2636,25 @@
         "41" : 3,
         "9" : 4,
         "32" : 5,
+=======
+        "40" : 4,
+        "23" : 4,
+        "7" : 5,
+        "32" : 5,
+        "15" : 3,
+        "41" : 3,
+        "8" : 4,
+        "24" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "33" : 4,
         "16" : 4,
         "42" : 4,
         "25" : 3,
+<<<<<<< HEAD
         "24" : 4,
+=======
+        "9" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 2,
         "17" : 5,
         "43" : 2,
@@ -1998,7 +2680,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "DA4757FA-7E13-412C-952E-7DF70CCE744A",
+=======
+      "id" : "5E42790A-51BF-4560-8E9E-B58EEB321208",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u35",
       "responses" : {
         "3" : 4,
@@ -2018,13 +2704,22 @@
         "32" : 2,
         "15" : 3,
         "41" : 4,
+<<<<<<< HEAD
         "8" : 3,
         "24" : 4,
+=======
+        "24" : 4,
+        "9" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "33" : 3,
         "16" : 4,
         "42" : 4,
         "25" : 4,
+<<<<<<< HEAD
         "9" : 4,
+=======
+        "8" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 3,
         "17" : 4,
         "43" : 2,
@@ -2049,7 +2744,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "7D98566C-3FF5-4474-B356-1DAE6AB2FE5B",
+=======
+      "id" : "028BCBA9-10A9-4BF5-B55C-087BDE3E0395",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u36",
       "responses" : {
         "3" : 5,
@@ -2063,6 +2762,7 @@
         "6" : 2,
         "31" : 3,
         "14" : 3,
+<<<<<<< HEAD
         "7" : 5,
         "23" : 2,
         "40" : 4,
@@ -2071,11 +2771,25 @@
         "41" : 4,
         "24" : 4,
         "9" : 4,
+=======
+        "40" : 4,
+        "7" : 5,
+        "23" : 2,
+        "32" : 4,
+        "15" : 4,
+        "41" : 4,
+        "8" : 3,
+        "24" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "33" : 4,
         "16" : 4,
         "42" : 4,
         "25" : 4,
+<<<<<<< HEAD
         "8" : 3,
+=======
+        "9" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 3,
         "17" : 1,
         "43" : 2,
@@ -2101,7 +2815,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "0C21EC31-838B-4140-A010-82C2BCB62512",
+=======
+      "id" : "7BD67B6F-8B27-4767-B93D-1E8E0E258D40",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u42",
       "responses" : {
         "3" : 2,
@@ -2116,6 +2834,7 @@
         "31" : 2,
         "14" : 3,
         "40" : 4,
+<<<<<<< HEAD
         "7" : 4,
         "23" : 4,
         "32" : 4,
@@ -2128,6 +2847,20 @@
         "9" : 4,
         "25" : 3,
         "42" : 4,
+=======
+        "23" : 4,
+        "7" : 4,
+        "32" : 4,
+        "15" : 5,
+        "8" : 4,
+        "24" : 3,
+        "9" : 4,
+        "33" : 4,
+        "16" : 4,
+        "42" : 4,
+        "25" : 3,
+        "41" : 2,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 5,
         "43" : 2,
@@ -2153,7 +2886,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "184885F4-4946-4774-87CF-0EFD12E4F8D8",
+=======
+      "id" : "CB4FAA73-8836-4031-9726-2B7E86A32BCD",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u43",
       "responses" : {
         "3" : 5,
@@ -2161,12 +2898,18 @@
         "21" : 4,
         "4" : 2,
         "30" : 2,
+<<<<<<< HEAD
         "13" : 5,
         "5" : 4,
+=======
+        "5" : 4,
+        "13" : 5,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 4,
         "6" : 4,
         "31" : 4,
         "14" : 2,
+<<<<<<< HEAD
         "40" : 4,
         "23" : 3,
         "7" : 3,
@@ -2175,11 +2918,25 @@
         "32" : 4,
         "24" : 4,
         "9" : 4,
+=======
+        "7" : 3,
+        "23" : 3,
+        "40" : 4,
+        "32" : 4,
+        "15" : 4,
+        "41" : 4,
+        "8" : 2,
+        "24" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "33" : 4,
         "16" : 2,
         "42" : 5,
         "25" : 4,
+<<<<<<< HEAD
         "41" : 4,
+=======
+        "9" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 4,
         "43" : 3,
@@ -2205,13 +2962,22 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "1839D4D3-743B-4C65-B6DC-396F076006A1",
+=======
+      "id" : "42E14A80-4B02-4608-A52F-38BA08740853",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u44",
       "responses" : {
         "3" : 4,
         "12" : 2,
+<<<<<<< HEAD
         "4" : 3,
         "21" : 4,
+=======
+        "21" : 4,
+        "4" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "30" : 4,
         "13" : 4,
         "5" : 4,
@@ -2220,18 +2986,31 @@
         "31" : 4,
         "14" : 4,
         "40" : 4,
+<<<<<<< HEAD
         "23" : 3,
         "7" : 4,
         "32" : 3,
         "15" : 4,
         "41" : 3,
         "24" : 3,
+=======
+        "7" : 4,
+        "23" : 3,
+        "32" : 3,
+        "15" : 4,
+        "41" : 3,
+        "8" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "9" : 3,
         "33" : 4,
         "16" : 4,
         "42" : 4,
         "25" : 2,
+<<<<<<< HEAD
         "8" : 4,
+=======
+        "24" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 3,
         "17" : 4,
         "43" : 3,
@@ -2257,7 +3036,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "1EF8D8DD-7A18-4A66-8E5C-2DBC5F68CE78",
+=======
+      "id" : "2F5E1BE3-EC70-484C-B15D-DA3C4927AA61",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u45",
       "responses" : {
         "3" : 4,
@@ -2265,8 +3048,13 @@
         "21" : 4,
         "4" : 2,
         "30" : 5,
+<<<<<<< HEAD
         "5" : 4,
         "13" : 4,
+=======
+        "13" : 4,
+        "5" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 4,
         "6" : 3,
         "31" : 2,
@@ -2277,8 +3065,13 @@
         "32" : 4,
         "8" : 3,
         "41" : 2,
+<<<<<<< HEAD
         "9" : 4,
         "24" : 2,
+=======
+        "24" : 2,
+        "9" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "33" : 4,
         "16" : 4,
         "42" : 3,
@@ -2309,7 +3102,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "A858342C-D7F0-42CE-AE01-77FA574B8829",
+=======
+      "id" : "961CFB8F-271E-4307-9843-5090B7BC2F27",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u47",
       "responses" : {
         "3" : 4,
@@ -2324,18 +3121,32 @@
         "31" : 2,
         "14" : 2,
         "40" : 3,
+<<<<<<< HEAD
         "7" : 4,
         "23" : 1,
+=======
+        "23" : 1,
+        "7" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "32" : 3,
         "15" : 5,
         "41" : 2,
         "8" : 2,
+<<<<<<< HEAD
         "24" : 5,
         "33" : 2,
         "16" : 5,
         "9" : 3,
         "42" : 3,
         "25" : 5,
+=======
+        "9" : 3,
+        "33" : 2,
+        "16" : 5,
+        "42" : 3,
+        "25" : 5,
+        "24" : 5,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 3,
         "17" : 3,
         "43" : 2,
@@ -2361,7 +3172,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "316D7D3B-EC5A-4542-AA48-07E16F5D68CA",
+=======
+      "id" : "842F66E9-5792-439B-B646-679B51141F41",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u49",
       "responses" : {
         "3" : 5,
@@ -2369,25 +3184,43 @@
         "21" : 5,
         "4" : 1,
         "30" : 5,
+<<<<<<< HEAD
         "5" : 5,
         "13" : 5,
+=======
+        "13" : 5,
+        "5" : 5,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 5,
         "6" : 4,
         "31" : 4,
         "14" : 4,
         "40" : 5,
+<<<<<<< HEAD
         "7" : 4,
         "23" : 4,
         "32" : 4,
         "8" : 4,
         "15" : 5,
         "24" : 5,
+=======
+        "23" : 4,
+        "7" : 4,
+        "32" : 4,
+        "15" : 5,
+        "41" : 4,
+        "8" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "9" : 5,
         "33" : 4,
         "16" : 5,
         "42" : 5,
         "25" : 5,
+<<<<<<< HEAD
         "41" : 4,
+=======
+        "24" : 5,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 3,
         "17" : 5,
         "43" : 2,
@@ -2413,7 +3246,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "C4C8FA58-0707-49EC-A570-6D7DDBFCFF80",
+=======
+      "id" : "B63ADB91-A138-4EED-98D2-DE152D17881E",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u51",
       "responses" : {
         "3" : 4,
@@ -2433,6 +3270,7 @@
         "32" : 3,
         "15" : 4,
         "41" : 4,
+<<<<<<< HEAD
         "9" : 4,
         "24" : 4,
         "33" : 4,
@@ -2440,6 +3278,15 @@
         "42" : 4,
         "25" : 4,
         "8" : 4,
+=======
+        "8" : 4,
+        "24" : 4,
+        "33" : 4,
+        "9" : 4,
+        "42" : 4,
+        "16" : 4,
+        "25" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 3,
         "43" : 2,
@@ -2465,13 +3312,22 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "62844AE0-A19E-4088-AC2C-FAB131B99254",
+=======
+      "id" : "9281E0D1-8FE7-4674-A88E-100AF063F9DB",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u52",
       "responses" : {
         "3" : 4,
         "12" : 1,
+<<<<<<< HEAD
         "21" : 5,
         "4" : 5,
+=======
+        "4" : 5,
+        "21" : 5,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "30" : 3,
         "13" : 3,
         "5" : 2,
@@ -2479,6 +3335,7 @@
         "6" : 5,
         "31" : 5,
         "14" : 5,
+<<<<<<< HEAD
         "7" : 3,
         "23" : 5,
         "40" : 5,
@@ -2492,6 +3349,21 @@
         "42" : 3,
         "25" : 1,
         "16" : 3,
+=======
+        "40" : 5,
+        "23" : 5,
+        "7" : 3,
+        "32" : 3,
+        "8" : 3,
+        "41" : 5,
+        "9" : 1,
+        "24" : 1,
+        "33" : 2,
+        "16" : 3,
+        "42" : 3,
+        "25" : 1,
+        "15" : 5,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 3,
         "17" : 5,
         "43" : 5,
@@ -2517,20 +3389,33 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "972C7F0A-E140-4333-A5BF-ECB1CD6382DD",
+=======
+      "id" : "7CF0EFF4-79EA-48A8-9ADE-8A3405DEC5E5",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u53",
       "responses" : {
         "3" : 5,
         "12" : 1,
+<<<<<<< HEAD
         "4" : 2,
         "21" : 4,
         "30" : 5,
         "5" : 5,
         "13" : 5,
+=======
+        "21" : 4,
+        "4" : 2,
+        "30" : 5,
+        "13" : 5,
+        "5" : 5,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 4,
         "6" : 4,
         "31" : 5,
         "14" : 5,
+<<<<<<< HEAD
         "40" : 5,
         "7" : 4,
         "23" : 3,
@@ -2544,6 +3429,21 @@
         "42" : 4,
         "25" : 4,
         "15" : 4,
+=======
+        "7" : 4,
+        "23" : 3,
+        "40" : 5,
+        "32" : 4,
+        "15" : 4,
+        "41" : 2,
+        "8" : 4,
+        "24" : 2,
+        "33" : 3,
+        "9" : 1,
+        "42" : 4,
+        "25" : 4,
+        "16" : 2,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 2,
         "17" : 5,
         "43" : 5,
@@ -2569,7 +3469,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "AEE5DB24-F1CA-4CA2-B1C0-2325E99EFC83",
+=======
+      "id" : "637479BA-A6C8-4522-984D-F60988B53CA7",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u54",
       "responses" : {
         "3" : 3,
@@ -2577,25 +3481,43 @@
         "21" : 3,
         "4" : 2,
         "30" : 3,
+<<<<<<< HEAD
         "5" : 3,
         "13" : 3,
+=======
+        "13" : 3,
+        "5" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 3,
         "6" : 3,
         "31" : 3,
         "14" : 3,
+<<<<<<< HEAD
         "40" : 3,
         "23" : 2,
         "7" : 4,
         "32" : 3,
         "15" : 3,
         "8" : 3,
+=======
+        "7" : 4,
+        "23" : 2,
+        "40" : 3,
+        "32" : 3,
+        "15" : 3,
+        "41" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "24" : 3,
         "9" : 3,
         "33" : 3,
         "16" : 3,
         "42" : 3,
         "25" : 3,
+<<<<<<< HEAD
         "41" : 3,
+=======
+        "8" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 3,
         "17" : 3,
         "43" : 3,
@@ -2621,7 +3543,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "D6A9640E-1CDD-4514-9BFE-18AD78EDF079",
+=======
+      "id" : "304A06D8-38E2-4855-9DB1-D571B85A6BF0",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u56",
       "responses" : {
         "3" : 4,
@@ -2629,8 +3555,13 @@
         "21" : 5,
         "4" : 1,
         "30" : 5,
+<<<<<<< HEAD
         "13" : 4,
         "5" : 4,
+=======
+        "5" : 4,
+        "13" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 4,
         "6" : 5,
         "31" : 5,
@@ -2638,16 +3569,27 @@
         "7" : 4,
         "23" : 3,
         "40" : 5,
+<<<<<<< HEAD
         "8" : 3,
         "15" : 4,
         "41" : 2,
+=======
+        "32" : 5,
+        "15" : 4,
+        "8" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "24" : 4,
         "9" : 3,
         "33" : 4,
         "16" : 2,
         "42" : 3,
+<<<<<<< HEAD
         "25" : 4,
         "32" : 5,
+=======
+        "41" : 2,
+        "25" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 4,
         "43" : 3,
@@ -2673,7 +3615,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "01272476-8E8F-4A7E-9010-09AE4305CF8F",
+=======
+      "id" : "559785C1-5EE3-46F9-84D1-56B99034B159",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u58",
       "responses" : {
         "3" : 4,
@@ -2681,8 +3627,13 @@
         "21" : 5,
         "4" : 2,
         "30" : 5,
+<<<<<<< HEAD
         "13" : 5,
         "5" : 4,
+=======
+        "5" : 4,
+        "13" : 5,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 5,
         "6" : 4,
         "31" : 5,
@@ -2724,21 +3675,34 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "081D09C5-34F0-4466-A796-818BE6701560",
+=======
+      "id" : "EB03AE1E-71B4-453A-8C5D-0C43BC12AA17",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u59",
       "responses" : {
         "3" : 4,
         "12" : 1,
+<<<<<<< HEAD
         "21" : 2,
         "4" : 2,
         "30" : 4,
         "13" : 4,
         "5" : 3,
+=======
+        "4" : 2,
+        "21" : 2,
+        "30" : 4,
+        "5" : 3,
+        "13" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 5,
         "6" : 4,
         "31" : 4,
         "14" : 3,
         "40" : 3,
+<<<<<<< HEAD
         "23" : 5,
         "7" : 4,
         "32" : 4,
@@ -2751,6 +3715,20 @@
         "42" : 4,
         "8" : 4,
         "25" : 3,
+=======
+        "7" : 4,
+        "23" : 5,
+        "32" : 4,
+        "15" : 3,
+        "41" : 4,
+        "9" : 4,
+        "8" : 4,
+        "33" : 4,
+        "24" : 4,
+        "42" : 4,
+        "25" : 3,
+        "16" : 5,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 4,
         "43" : 5,
@@ -2776,13 +3754,22 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "2CE376E4-1791-4C29-BEEE-7C9DC9204583",
+=======
+      "id" : "B007778D-0257-4B91-9573-5315B2371CC6",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u00",
       "responses" : {
         "3" : 3,
         "12" : 4,
+<<<<<<< HEAD
         "4" : 3,
         "21" : 3,
+=======
+        "21" : 3,
+        "4" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "30" : 4,
         "13" : 4,
         "5" : 5,
@@ -2790,6 +3777,7 @@
         "6" : 4,
         "31" : 4,
         "14" : 5,
+<<<<<<< HEAD
         "7" : 3,
         "23" : 3,
         "40" : 4,
@@ -2803,6 +3791,21 @@
         "42" : 4,
         "25" : 5,
         "24" : 5,
+=======
+        "40" : 4,
+        "23" : 3,
+        "7" : 3,
+        "32" : 2,
+        "15" : 5,
+        "41" : 2,
+        "24" : 5,
+        "8" : 4,
+        "33" : 2,
+        "9" : 3,
+        "16" : 5,
+        "25" : 5,
+        "42" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 2,
         "17" : 4,
         "43" : 4,
@@ -2828,7 +3831,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "453DC3CA-40BF-4921-BD7C-928E31B8A5D4",
+=======
+      "id" : "7FCA33F2-FF2A-4CA6-83DF-F2359C0269CE",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u01",
       "responses" : {
         "3" : 5,
@@ -2842,19 +3849,32 @@
         "6" : 4,
         "31" : 4,
         "14" : 2,
+<<<<<<< HEAD
         "40" : 5,
         "23" : 2,
         "7" : 5,
         "8" : 2,
         "15" : 4,
         "32" : 5,
+=======
+        "7" : 5,
+        "23" : 2,
+        "40" : 5,
+        "32" : 5,
+        "8" : 2,
+        "41" : 2,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "9" : 4,
         "24" : 3,
         "33" : 5,
         "16" : 3,
         "42" : 3,
         "25" : 4,
+<<<<<<< HEAD
         "41" : 2,
+=======
+        "15" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 5,
         "17" : 4,
         "43" : 2,
@@ -2880,21 +3900,34 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "6876192F-89D0-4E70-A1FD-EF3EA6050AA7",
+=======
+      "id" : "D02D7B28-0846-4400-B145-F01DAF832EEE",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u02",
       "responses" : {
         "3" : 5,
         "12" : 4,
+<<<<<<< HEAD
         "4" : 1,
         "21" : 5,
         "30" : 5,
         "5" : 3,
         "13" : 5,
+=======
+        "21" : 5,
+        "4" : 1,
+        "30" : 5,
+        "13" : 5,
+        "5" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 2,
         "6" : 5,
         "31" : 4,
         "14" : 4,
         "40" : 5,
+<<<<<<< HEAD
         "23" : 2,
         "7" : 4,
         "8" : 2,
@@ -2907,6 +3940,20 @@
         "42" : 4,
         "9" : 3,
         "25" : 3,
+=======
+        "7" : 4,
+        "23" : 2,
+        "32" : 4,
+        "8" : 2,
+        "41" : 4,
+        "24" : 2,
+        "9" : 3,
+        "33" : 5,
+        "16" : 3,
+        "42" : 4,
+        "25" : 3,
+        "15" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 2,
         "17" : 2,
         "43" : 4,
@@ -2932,13 +3979,22 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "3229823B-9FEE-4EFF-A685-62167828B2BD",
+=======
+      "id" : "EDE765C7-AC86-4935-AA3F-B2BCE73545EB",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u03",
       "responses" : {
         "3" : 4,
         "12" : 2,
+<<<<<<< HEAD
         "21" : 4,
         "4" : 3,
+=======
+        "4" : 3,
+        "21" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "30" : 2,
         "13" : 4,
         "5" : 3,
@@ -2947,18 +4003,31 @@
         "31" : 4,
         "14" : 4,
         "40" : 3,
+<<<<<<< HEAD
         "23" : 2,
         "7" : 4,
+=======
+        "7" : 4,
+        "23" : 2,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "32" : 4,
         "15" : 4,
         "41" : 3,
         "8" : 2,
         "24" : 4,
+<<<<<<< HEAD
         "33" : 4,
         "16" : 2,
         "42" : 2,
         "25" : 3,
         "9" : 3,
+=======
+        "9" : 3,
+        "16" : 2,
+        "42" : 2,
+        "25" : 3,
+        "33" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 3,
         "17" : 2,
         "43" : 2,
@@ -2984,7 +4053,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "79638098-D2BE-4032-8653-79A02DB4846E",
+=======
+      "id" : "991C4F82-3F6F-4C4C-AE2D-E669D5D134BC",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u04",
       "responses" : {
         "3" : 3,
@@ -3001,16 +4074,26 @@
         "40" : 3,
         "23" : 4,
         "7" : 5,
+<<<<<<< HEAD
         "32" : 4,
         "15" : 2,
         "8" : 4,
+=======
+        "8" : 4,
+        "15" : 2,
+        "41" : 2,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "24" : 1,
         "9" : 1,
         "33" : 3,
         "16" : 3,
         "42" : 4,
         "25" : 3,
+<<<<<<< HEAD
         "41" : 2,
+=======
+        "32" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 2,
         "17" : 2,
         "43" : 4,
@@ -3036,7 +4119,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "AD90B2B7-557D-482C-819E-50F1BC9B4592",
+=======
+      "id" : "C7C60019-A9D4-4085-9D13-19C001973DAB",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u05",
       "responses" : {
         "3" : 5,
@@ -3044,8 +4131,13 @@
         "21" : 4,
         "4" : 1,
         "30" : 4,
+<<<<<<< HEAD
         "13" : 5,
         "5" : 3,
+=======
+        "5" : 3,
+        "13" : 5,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 3,
         "6" : 4,
         "31" : 4,
@@ -3053,16 +4145,28 @@
         "40" : 4,
         "23" : 2,
         "7" : 5,
+<<<<<<< HEAD
         "32" : 4,
         "15" : 3,
         "8" : 1,
         "9" : 4,
         "41" : 3,
+=======
+        "8" : 1,
+        "15" : 3,
+        "41" : 3,
+        "24" : 4,
+        "9" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "33" : 4,
         "16" : 4,
         "42" : 4,
         "25" : 3,
+<<<<<<< HEAD
         "24" : 4,
+=======
+        "32" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 4,
         "43" : 3,
@@ -3088,7 +4192,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "7316521F-669F-4CCF-9EAE-7FC92F91DAAF",
+=======
+      "id" : "CD03FAD2-9D4C-4441-A141-1E2EAB6A0853",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u07",
       "responses" : {
         "3" : 5,
@@ -3102,6 +4210,7 @@
         "6" : 3,
         "31" : 2,
         "14" : 2,
+<<<<<<< HEAD
         "7" : 5,
         "40" : 3,
         "23" : 2,
@@ -3115,6 +4224,21 @@
         "42" : 4,
         "25" : 4,
         "8" : 2,
+=======
+        "40" : 3,
+        "7" : 5,
+        "23" : 2,
+        "32" : 4,
+        "8" : 2,
+        "15" : 3,
+        "24" : 4,
+        "9" : 4,
+        "41" : 4,
+        "16" : 3,
+        "42" : 4,
+        "25" : 4,
+        "33" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 5,
         "43" : 3,
@@ -3139,7 +4263,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "DC013CD8-F545-490B-89AB-2186A71D60EE",
+=======
+      "id" : "CCB03356-8772-4527-9523-D684266FE053",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u08",
       "responses" : {
         "3" : 5,
@@ -3153,6 +4281,7 @@
         "6" : 4,
         "31" : 5,
         "14" : 4,
+<<<<<<< HEAD
         "7" : 5,
         "23" : 2,
         "40" : 4,
@@ -3166,6 +4295,21 @@
         "42" : 4,
         "25" : 2,
         "15" : 5,
+=======
+        "40" : 4,
+        "7" : 5,
+        "23" : 2,
+        "32" : 4,
+        "15" : 5,
+        "41" : 4,
+        "8" : 4,
+        "24" : 4,
+        "33" : 5,
+        "16" : 2,
+        "42" : 4,
+        "9" : 4,
+        "25" : 2,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 4,
         "43" : 2,
@@ -3191,13 +4335,22 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "6F337558-95FB-4843-97AD-E5D1CD82FF39",
+=======
+      "id" : "23206C95-2EFA-4A6D-B375-3DBF151081D0",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u09",
       "responses" : {
         "3" : 4,
         "12" : 1,
+<<<<<<< HEAD
         "4" : 1,
         "21" : 4,
+=======
+        "21" : 4,
+        "4" : 1,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "30" : 3,
         "13" : 4,
         "5" : 4,
@@ -3206,6 +4359,7 @@
         "31" : 4,
         "14" : 2,
         "40" : 4,
+<<<<<<< HEAD
         "7" : 4,
         "23" : 3,
         "32" : 4,
@@ -3213,11 +4367,24 @@
         "8" : 4,
         "24" : 4,
         "9" : 4,
+=======
+        "23" : 3,
+        "7" : 4,
+        "32" : 4,
+        "15" : 5,
+        "41" : 3,
+        "9" : 4,
+        "24" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "33" : 3,
         "16" : 3,
         "42" : 4,
         "25" : 4,
+<<<<<<< HEAD
         "41" : 3,
+=======
+        "8" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 5,
         "43" : 4,
@@ -3243,7 +4410,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "4EC13CE7-3F52-487A-BDCB-9A89DE64FCF5",
+=======
+      "id" : "42719A0A-F975-44DF-9BA0-3B93B4C2DC1F",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u10",
       "responses" : {
         "3" : 5,
@@ -3260,16 +4431,28 @@
         "40" : 4,
         "23" : 1,
         "7" : 2,
+<<<<<<< HEAD
         "8" : 1,
         "32" : 1,
         "41" : 1,
         "24" : 3,
         "9" : 4,
+=======
+        "32" : 1,
+        "15" : 5,
+        "41" : 1,
+        "9" : 4,
+        "24" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "33" : 5,
         "16" : 3,
         "42" : 1,
         "25" : 4,
+<<<<<<< HEAD
         "15" : 5,
+=======
+        "8" : 1,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 1,
         "43" : 2,
@@ -3295,7 +4478,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "6D2E589D-DC76-4F70-B1FC-494E8B01065F",
+=======
+      "id" : "C3482151-93D1-4B92-A875-EAAD631E7355",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u12",
       "responses" : {
         "3" : 4,
@@ -3313,15 +4500,25 @@
         "23" : 2,
         "7" : 3,
         "32" : 4,
+<<<<<<< HEAD
         "8" : 3,
         "41" : 4,
         "24" : 3,
+=======
+        "15" : 3,
+        "41" : 4,
+        "8" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "9" : 4,
         "33" : 4,
         "16" : 4,
         "42" : 3,
         "25" : 4,
+<<<<<<< HEAD
         "15" : 3,
+=======
+        "24" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 3,
         "43" : 2,
@@ -3347,20 +4544,33 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "0223DC64-5E92-4089-8665-75DA36B1ACB4",
+=======
+      "id" : "2AB54908-DA8C-4A24-88CB-8CE127FF0A48",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u13",
       "responses" : {
         "3" : 2,
         "12" : 4,
+<<<<<<< HEAD
         "21" : 5,
         "4" : 2,
         "30" : 5,
         "13" : 3,
         "5" : 5,
+=======
+        "4" : 2,
+        "21" : 5,
+        "30" : 5,
+        "5" : 5,
+        "13" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 5,
         "6" : 1,
         "31" : 5,
         "14" : 4,
+<<<<<<< HEAD
         "7" : 4,
         "40" : 4,
         "23" : 3,
@@ -3369,11 +4579,25 @@
         "41" : 5,
         "8" : 5,
         "9" : 1,
+=======
+        "40" : 4,
+        "23" : 3,
+        "7" : 4,
+        "8" : 5,
+        "15" : 5,
+        "32" : 4,
+        "24" : 3,
+        "41" : 5,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "33" : 3,
         "16" : 5,
         "42" : 4,
         "25" : 5,
+<<<<<<< HEAD
         "24" : 3,
+=======
+        "9" : 1,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 3,
         "17" : 5,
         "43" : 4,
@@ -3399,16 +4623,28 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "50BFFFE3-5748-4471-9F6A-4BD940043EF3",
+=======
+      "id" : "C4F979D8-2892-4AA5-8080-8156DACC20C4",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u14",
       "responses" : {
         "3" : 5,
         "12" : 1,
+<<<<<<< HEAD
         "4" : 1,
         "21" : 4,
         "30" : 4,
         "5" : 4,
         "13" : 5,
+=======
+        "21" : 4,
+        "4" : 1,
+        "30" : 4,
+        "13" : 5,
+        "5" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 3,
         "6" : 4,
         "31" : 4,
@@ -3417,6 +4653,7 @@
         "7" : 4,
         "32" : 5,
         "15" : 4,
+<<<<<<< HEAD
         "8" : 3,
         "24" : 5,
         "9" : 3,
@@ -3425,6 +4662,16 @@
         "42" : 4,
         "41" : 4,
         "25" : 3,
+=======
+        "41" : 4,
+        "8" : 3,
+        "24" : 5,
+        "33" : 4,
+        "16" : 4,
+        "42" : 4,
+        "25" : 3,
+        "9" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 4,
         "43" : 4,
@@ -3449,7 +4696,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "AD17827C-A42F-4B84-8B3E-E6DB9CA43733",
+=======
+      "id" : "FC4D656C-42A9-4543-9770-04542E58056A",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u15",
       "responses" : {
         "3" : 4,
@@ -3467,10 +4718,17 @@
         "23" : 4,
         "40" : 3,
         "32" : 3,
+<<<<<<< HEAD
         "15" : 3,
         "41" : 3,
         "8" : 4,
         "24" : 4,
+=======
+        "8" : 4,
+        "41" : 3,
+        "24" : 4,
+        "15" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "33" : 4,
         "16" : 3,
         "42" : 3,
@@ -3501,7 +4759,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "5AA752F5-1952-45BF-9841-B42F19B31EEF",
+=======
+      "id" : "1D2192D1-B0AD-4083-8EF9-586EAD3AA539",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u16",
       "responses" : {
         "3" : 5,
@@ -3518,6 +4780,7 @@
         "7" : 3,
         "23" : 3,
         "40" : 5,
+<<<<<<< HEAD
         "32" : 3,
         "15" : 3,
         "41" : 1,
@@ -3528,6 +4791,18 @@
         "42" : 4,
         "25" : 3,
         "16" : 3,
+=======
+        "8" : 3,
+        "15" : 3,
+        "41" : 1,
+        "24" : 2,
+        "32" : 3,
+        "33" : 3,
+        "16" : 3,
+        "42" : 4,
+        "25" : 3,
+        "9" : 2,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 3,
         "17" : 4,
         "43" : 4,
@@ -3553,20 +4828,33 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "79A3FD1A-D208-4FF7-B9D3-4FE5A729CA70",
+=======
+      "id" : "A4763DE6-C426-4455-AB24-59F0D69E6D47",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u17",
       "responses" : {
         "3" : 5,
         "12" : 4,
+<<<<<<< HEAD
         "21" : 5,
         "4" : 4,
         "30" : 5,
         "13" : 5,
         "5" : 5,
+=======
+        "4" : 4,
+        "21" : 5,
+        "30" : 5,
+        "5" : 5,
+        "13" : 5,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 5,
         "6" : 5,
         "31" : 5,
         "14" : 4,
+<<<<<<< HEAD
         "7" : 5,
         "23" : 3,
         "40" : 5,
@@ -3580,6 +4868,21 @@
         "42" : 5,
         "25" : 5,
         "16" : 3,
+=======
+        "40" : 5,
+        "7" : 5,
+        "23" : 3,
+        "8" : 5,
+        "15" : 4,
+        "41" : 1,
+        "24" : 4,
+        "9" : 2,
+        "33" : 3,
+        "16" : 3,
+        "42" : 5,
+        "25" : 5,
+        "32" : 5,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 5,
         "17" : 5,
         "43" : 3,
@@ -3605,13 +4908,22 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "D4EF014A-A36D-4C4A-8618-1E08EF75F605",
+=======
+      "id" : "43C74C96-D4AD-4789-B9E5-91CFABD168A2",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u18",
       "responses" : {
         "3" : 3,
         "12" : 4,
+<<<<<<< HEAD
         "4" : 5,
         "21" : 3,
+=======
+        "21" : 3,
+        "4" : 5,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "30" : 2,
         "13" : 4,
         "5" : 3,
@@ -3623,15 +4935,26 @@
         "23" : 2,
         "7" : 3,
         "32" : 2,
+<<<<<<< HEAD
         "8" : 4,
         "41" : 4,
         "24" : 2,
         "9" : 2,
+=======
+        "15" : 3,
+        "8" : 4,
+        "24" : 2,
+        "41" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "33" : 3,
         "16" : 2,
         "42" : 3,
         "25" : 2,
+<<<<<<< HEAD
         "15" : 3,
+=======
+        "9" : 2,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 3,
         "17" : 2,
         "43" : 4,
@@ -3657,13 +4980,22 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "3A0E6E09-2585-4633-9CEB-E1B2CC8BF22D",
+=======
+      "id" : "1FF614D5-4F45-4F6B-A2CD-A1B0F3C198CC",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u19",
       "responses" : {
         "3" : 4,
         "12" : 2,
+<<<<<<< HEAD
         "21" : 5,
         "4" : 3,
+=======
+        "4" : 3,
+        "21" : 5,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "30" : 3,
         "13" : 4,
         "5" : 4,
@@ -3671,6 +5003,7 @@
         "6" : 5,
         "31" : 5,
         "14" : 4,
+<<<<<<< HEAD
         "7" : 3,
         "23" : 3,
         "40" : 4,
@@ -3679,11 +5012,25 @@
         "8" : 4,
         "9" : 3,
         "41" : 3,
+=======
+        "40" : 4,
+        "7" : 3,
+        "23" : 3,
+        "8" : 4,
+        "15" : 4,
+        "41" : 3,
+        "24" : 3,
+        "9" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "33" : 4,
         "16" : 3,
         "42" : 4,
         "25" : 3,
+<<<<<<< HEAD
         "24" : 3,
+=======
+        "32" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 3,
         "17" : 3,
         "43" : 3,
@@ -3709,13 +5056,22 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "9C214335-0251-43EA-99CE-4DC81674787A",
+=======
+      "id" : "AB64B87F-2346-4DAD-B561-B3C3A00442F2",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u20",
       "responses" : {
         "3" : 4,
         "12" : 2,
+<<<<<<< HEAD
         "21" : 3,
         "4" : 2,
+=======
+        "4" : 2,
+        "21" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "30" : 5,
         "13" : 4,
         "5" : 5,
@@ -3723,19 +5079,34 @@
         "6" : 2,
         "31" : 3,
         "14" : 3,
+<<<<<<< HEAD
         "7" : 5,
         "40" : 4,
         "23" : 3,
         "32" : 4,
         "15" : 4,
+=======
+        "40" : 4,
+        "23" : 3,
+        "7" : 5,
+        "8" : 2,
+        "32" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "41" : 5,
         "24" : 4,
         "9" : 3,
         "33" : 3,
+<<<<<<< HEAD
         "16" : 4,
         "42" : 4,
         "8" : 2,
         "25" : 4,
+=======
+        "15" : 4,
+        "42" : 4,
+        "25" : 4,
+        "16" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 5,
         "43" : 3,
@@ -3761,7 +5132,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "8C2B72E9-D0A4-487E-B85A-DE3EC7AC41C8",
+=======
+      "id" : "25DBAE4E-E4AE-4B96-9698-1BB05BB010D0",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u22",
       "responses" : {
         "3" : 5,
@@ -3775,6 +5150,7 @@
         "6" : 3,
         "31" : 4,
         "14" : 4,
+<<<<<<< HEAD
         "7" : 3,
         "23" : 1,
         "40" : 4,
@@ -3788,6 +5164,21 @@
         "42" : 4,
         "25" : 5,
         "8" : 4,
+=======
+        "40" : 4,
+        "23" : 1,
+        "7" : 3,
+        "8" : 4,
+        "15" : 5,
+        "41" : 4,
+        "9" : 3,
+        "24" : 3,
+        "33" : 5,
+        "16" : 5,
+        "32" : 4,
+        "25" : 5,
+        "42" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 2,
         "17" : 2,
         "43" : 2,
@@ -3813,7 +5204,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "02009AA1-20A1-4900-B081-8184156AE1A7",
+=======
+      "id" : "9C1D4B81-42DE-4CB8-BB11-0EBE64074A36",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u23",
       "responses" : {
         "3" : 4,
@@ -3821,12 +5216,18 @@
         "21" : 4,
         "4" : 4,
         "30" : 3,
+<<<<<<< HEAD
         "5" : 4,
         "13" : 3,
+=======
+        "13" : 3,
+        "5" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 5,
         "6" : 4,
         "14" : 4,
         "40" : 4,
+<<<<<<< HEAD
         "23" : 2,
         "7" : 4,
         "8" : 4,
@@ -3839,6 +5240,20 @@
         "42" : 3,
         "25" : 3,
         "32" : 4,
+=======
+        "7" : 4,
+        "23" : 2,
+        "32" : 4,
+        "15" : 4,
+        "41" : 3,
+        "8" : 4,
+        "24" : 2,
+        "9" : 3,
+        "16" : 4,
+        "42" : 3,
+        "25" : 3,
+        "33" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 3,
         "17" : 3,
         "43" : 5,
@@ -3864,7 +5279,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "FB8221B8-9119-4E81-8FEE-E4997DC2D547",
+=======
+      "id" : "95A39BA0-1F49-45CC-BA26-5B6AF3DD0BFA",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u24",
       "responses" : {
         "3" : 2,
@@ -3878,6 +5297,7 @@
         "6" : 3,
         "31" : 4,
         "14" : 2,
+<<<<<<< HEAD
         "40" : 3,
         "23" : 4,
         "7" : 4,
@@ -3886,6 +5306,16 @@
         "41" : 4,
         "8" : 4,
         "24" : 2,
+=======
+        "7" : 4,
+        "23" : 4,
+        "40" : 3,
+        "32" : 2,
+        "15" : 4,
+        "41" : 4,
+        "24" : 2,
+        "8" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "33" : 5,
         "9" : 3,
         "42" : 4,
@@ -3916,13 +5346,22 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "16D7FF70-8DC1-4031-911E-75AA98FB4078",
+=======
+      "id" : "E9A8B29A-7773-4B5A-AF2E-17D6C7A3A529",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u27",
       "responses" : {
         "3" : 3,
         "12" : 1,
+<<<<<<< HEAD
         "21" : 4,
         "4" : 3,
+=======
+        "4" : 3,
+        "21" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "30" : 5,
         "13" : 4,
         "5" : 3,
@@ -3933,6 +5372,7 @@
         "40" : 4,
         "23" : 3,
         "7" : 4,
+<<<<<<< HEAD
         "32" : 4,
         "15" : 3,
         "41" : 4,
@@ -3943,6 +5383,18 @@
         "8" : 4,
         "25" : 3,
         "42" : 4,
+=======
+        "8" : 4,
+        "15" : 3,
+        "41" : 4,
+        "24" : 3,
+        "9" : 3,
+        "33" : 2,
+        "32" : 4,
+        "42" : 4,
+        "25" : 3,
+        "16" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 3,
         "17" : 4,
         "43" : 4,
@@ -3968,7 +5420,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "71524EF6-957B-4EDD-8E2E-FD68D84E5D01",
+=======
+      "id" : "09A28185-9FD6-47E0-BEBE-27271253E580",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u30",
       "responses" : {
         "3" : 5,
@@ -3976,8 +5432,13 @@
         "21" : 2,
         "4" : 1,
         "30" : 3,
+<<<<<<< HEAD
         "5" : 4,
         "13" : 5,
+=======
+        "13" : 5,
+        "5" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 4,
         "6" : 2,
         "31" : 2,
@@ -3985,6 +5446,7 @@
         "7" : 4,
         "23" : 1,
         "40" : 4,
+<<<<<<< HEAD
         "8" : 2,
         "32" : 4,
         "15" : 4,
@@ -3995,6 +5457,18 @@
         "41" : 3,
         "25" : 4,
         "42" : 4,
+=======
+        "32" : 4,
+        "15" : 4,
+        "41" : 3,
+        "24" : 4,
+        "8" : 2,
+        "33" : 4,
+        "16" : 5,
+        "42" : 4,
+        "25" : 4,
+        "9" : 2,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 5,
         "17" : 4,
         "43" : 2,
@@ -4020,7 +5494,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "83C08554-999E-4828-B423-60AC5323E684",
+=======
+      "id" : "41BCC69E-C060-4ACB-934A-BCF3F7CCC023",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u31",
       "responses" : {
         "3" : 4,
@@ -4035,6 +5513,7 @@
         "31" : 1,
         "14" : 3,
         "40" : 4,
+<<<<<<< HEAD
         "7" : 4,
         "23" : 4,
         "32" : 5,
@@ -4047,6 +5526,20 @@
         "42" : 4,
         "9" : 3,
         "25" : 4,
+=======
+        "23" : 4,
+        "7" : 4,
+        "8" : 4,
+        "15" : 1,
+        "41" : 5,
+        "24" : 4,
+        "9" : 3,
+        "32" : 5,
+        "16" : 2,
+        "42" : 4,
+        "25" : 4,
+        "33" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 2,
         "17" : 5,
         "43" : 3,
@@ -4072,13 +5565,22 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "B238D1AE-34F0-4670-A2B1-6679EAF0C074",
+=======
+      "id" : "3B4A946E-F620-49DF-A8D2-643B101AF22B",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u32",
       "responses" : {
         "3" : 5,
         "12" : 1,
+<<<<<<< HEAD
         "4" : 1,
         "21" : 2,
+=======
+        "21" : 2,
+        "4" : 1,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "30" : 4,
         "13" : 4,
         "5" : 4,
@@ -4086,19 +5588,33 @@
         "6" : 3,
         "31" : 3,
         "14" : 2,
+<<<<<<< HEAD
         "40" : 4,
         "7" : 4,
         "23" : 3,
+=======
+        "7" : 4,
+        "23" : 3,
+        "40" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "32" : 4,
         "15" : 4,
         "8" : 1,
         "9" : 5,
         "24" : 5,
+<<<<<<< HEAD
         "33" : 5,
         "16" : 5,
         "41" : 4,
         "25" : 4,
         "42" : 5,
+=======
+        "41" : 4,
+        "16" : 5,
+        "42" : 5,
+        "25" : 4,
+        "33" : 5,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 5,
         "43" : 3,
@@ -4124,7 +5640,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "731E5148-40A5-4F72-9966-E786A8B41BEC",
+=======
+      "id" : "671AF262-FDA9-4B98-ABC4-A5D8DFA2DEB3",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u33",
       "responses" : {
         "3" : 3,
@@ -4138,6 +5658,7 @@
         "6" : 3,
         "31" : 4,
         "14" : 4,
+<<<<<<< HEAD
         "7" : 4,
         "40" : 5,
         "23" : 5,
@@ -4151,6 +5672,21 @@
         "16" : 3,
         "25" : 5,
         "42" : 2,
+=======
+        "40" : 5,
+        "23" : 5,
+        "7" : 4,
+        "8" : 4,
+        "15" : 4,
+        "41" : 1,
+        "24" : 3,
+        "9" : 1,
+        "32" : 4,
+        "33" : 3,
+        "42" : 2,
+        "25" : 5,
+        "16" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 3,
         "43" : 5,
@@ -4176,7 +5712,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "7ECF8ED5-6074-49B4-B0FF-571BCCE60742",
+=======
+      "id" : "50EE0081-A1F2-4A43-93A6-4B3C28BEE8E2",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u34",
       "responses" : {
         "3" : 3,
@@ -4228,13 +5768,22 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "51C787DE-4B9F-47AE-A92B-F530A5CDF480",
+=======
+      "id" : "6E923C58-8FAB-413B-9F83-1B216916866E",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u35",
       "responses" : {
         "3" : 4,
         "12" : 2,
+<<<<<<< HEAD
         "4" : 2,
         "21" : 4,
+=======
+        "21" : 4,
+        "4" : 2,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "30" : 2,
         "13" : 4,
         "5" : 4,
@@ -4243,18 +5792,30 @@
         "31" : 4,
         "14" : 3,
         "40" : 4,
+<<<<<<< HEAD
         "23" : 3,
         "7" : 4,
         "32" : 4,
         "8" : 2,
         "41" : 2,
+=======
+        "7" : 4,
+        "23" : 3,
+        "8" : 2,
+        "15" : 3,
+        "32" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "9" : 4,
         "24" : 2,
         "33" : 3,
         "16" : 3,
         "42" : 4,
         "25" : 3,
+<<<<<<< HEAD
         "15" : 3,
+=======
+        "41" : 2,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 3,
         "17" : 4,
         "43" : 3,
@@ -4280,7 +5841,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "246DFD0C-3D69-420D-A940-FFE64B966128",
+=======
+      "id" : "56623A26-2CA9-46C4-888A-C0F723A52C92",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u36",
       "responses" : {
         "3" : 4,
@@ -4297,7 +5862,11 @@
         "40" : 4,
         "23" : 2,
         "7" : 4,
+<<<<<<< HEAD
         "8" : 3,
+=======
+        "32" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "15" : 4,
         "41" : 3,
         "9" : 4,
@@ -4306,7 +5875,11 @@
         "16" : 4,
         "42" : 4,
         "25" : 4,
+<<<<<<< HEAD
         "32" : 4,
+=======
+        "8" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 3,
         "17" : 4,
         "43" : 2,
@@ -4332,7 +5905,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "809662E3-F69D-456F-A750-87A072AFDB9A",
+=======
+      "id" : "41E0B952-6714-4764-9D3A-77724B756905",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u39",
       "responses" : {
         "3" : 4,
@@ -4347,18 +5924,32 @@
         "31" : 3,
         "14" : 4,
         "7" : 3,
+<<<<<<< HEAD
         "40" : 4,
         "23" : 4,
         "8" : 4,
+=======
+        "23" : 4,
+        "40" : 4,
+        "32" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "15" : 4,
         "41" : 3,
         "24" : 4,
         "9" : 4,
+<<<<<<< HEAD
         "32" : 4,
         "16" : 4,
         "42" : 4,
         "33" : 4,
         "25" : 4,
+=======
+        "33" : 4,
+        "16" : 4,
+        "8" : 4,
+        "25" : 4,
+        "42" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 3,
         "17" : 3,
         "43" : 3,
@@ -4384,7 +5975,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "A07D5D34-413F-4A9B-BC6E-2173496FCCDB",
+=======
+      "id" : "88C56F43-3AF2-4AA1-A5F5-5A86A0EE1A89",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u42",
       "responses" : {
         "3" : 3,
@@ -4401,16 +5996,27 @@
         "40" : 4,
         "23" : 4,
         "7" : 4,
+<<<<<<< HEAD
         "32" : 4,
         "15" : 4,
         "41" : 2,
         "8" : 4,
+=======
+        "8" : 4,
+        "15" : 4,
+        "41" : 2,
+        "24" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "9" : 4,
         "33" : 4,
         "16" : 4,
         "42" : 4,
         "25" : 4,
+<<<<<<< HEAD
         "24" : 3,
+=======
+        "32" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 5,
         "43" : 4,
@@ -4436,7 +6042,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "6F352817-2B26-483A-BB7A-730AC2B74E05",
+=======
+      "id" : "A98CEF2B-6BCE-4D8B-B731-34F3DC25A2AD",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u43",
       "responses" : {
         "3" : 5,
@@ -4453,6 +6063,7 @@
         "7" : 4,
         "23" : 1,
         "40" : 4,
+<<<<<<< HEAD
         "8" : 4,
         "15" : 4,
         "41" : 4,
@@ -4463,6 +6074,18 @@
         "42" : 4,
         "25" : 4,
         "33" : 3,
+=======
+        "32" : 4,
+        "8" : 4,
+        "41" : 4,
+        "9" : 4,
+        "24" : 4,
+        "33" : 3,
+        "16" : 4,
+        "42" : 4,
+        "25" : 4,
+        "15" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 5,
         "17" : 5,
         "43" : 2,
@@ -4488,33 +6111,58 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "C37DBF93-98F3-4695-8FEE-5EF73BC61D64",
+=======
+      "id" : "82FBA3F3-B6A6-4B97-A7C0-F08762A3C490",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u44",
       "responses" : {
         "3" : 4,
         "12" : 2,
+<<<<<<< HEAD
         "4" : 1,
         "21" : 4,
         "30" : 4,
         "5" : 4,
         "13" : 4,
+=======
+        "21" : 4,
+        "4" : 1,
+        "30" : 4,
+        "13" : 4,
+        "5" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 4,
         "6" : 3,
         "31" : 2,
         "14" : 4,
+<<<<<<< HEAD
         "40" : 4,
         "7" : 4,
         "23" : 2,
         "32" : 4,
         "15" : 4,
         "41" : 2,
+=======
+        "7" : 4,
+        "23" : 2,
+        "40" : 4,
+        "8" : 4,
+        "32" : 4,
+        "15" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "24" : 4,
         "9" : 4,
         "33" : 4,
         "16" : 4,
         "42" : 4,
         "25" : 4,
+<<<<<<< HEAD
         "8" : 4,
+=======
+        "41" : 2,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 3,
         "17" : 5,
         "43" : 4,
@@ -4540,7 +6188,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "A1448E5B-1863-403D-8860-965069197224",
+=======
+      "id" : "AB90C1CE-C8F8-406F-B92C-B0FD4A2771CF",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u45",
       "responses" : {
         "3" : 3,
@@ -4554,19 +6206,32 @@
         "6" : 2,
         "31" : 1,
         "14" : 3,
+<<<<<<< HEAD
         "7" : 3,
         "23" : 5,
         "40" : 3,
         "32" : 3,
         "8" : 2,
+=======
+        "40" : 3,
+        "23" : 5,
+        "7" : 3,
+        "32" : 3,
+        "15" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "41" : 1,
         "24" : 2,
         "9" : 1,
         "33" : 3,
         "16" : 4,
         "42" : 4,
+<<<<<<< HEAD
         "15" : 3,
         "25" : 3,
+=======
+        "25" : 3,
+        "8" : 2,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 3,
         "43" : 2,
@@ -4592,13 +6257,22 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "3AC762C2-54ED-4EB7-886C-56034E8D5915",
+=======
+      "id" : "CF34FA4F-B28E-438F-8279-DAE40EF67A65",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u46",
       "responses" : {
         "3" : 5,
         "12" : 4,
+<<<<<<< HEAD
         "4" : 2,
         "21" : 2,
+=======
+        "21" : 2,
+        "4" : 2,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "30" : 5,
         "13" : 4,
         "5" : 4,
@@ -4607,6 +6281,7 @@
         "31" : 3,
         "14" : 3,
         "40" : 4,
+<<<<<<< HEAD
         "23" : 3,
         "7" : 5,
         "32" : 4,
@@ -4619,6 +6294,20 @@
         "42" : 4,
         "25" : 4,
         "41" : 2,
+=======
+        "7" : 5,
+        "23" : 3,
+        "8" : 3,
+        "15" : 4,
+        "41" : 2,
+        "9" : 2,
+        "24" : 3,
+        "33" : 4,
+        "16" : 2,
+        "32" : 4,
+        "25" : 4,
+        "42" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 2,
         "17" : 2,
         "43" : 4,
@@ -4644,13 +6333,22 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "16ADDC9B-E86B-456F-A764-355DE5BF01BC",
+=======
+      "id" : "52C4165E-88D8-4CAA-97E3-CE89ADCA536B",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u47",
       "responses" : {
         "3" : 4,
         "12" : 3,
+<<<<<<< HEAD
         "4" : 2,
         "21" : 2,
+=======
+        "21" : 2,
+        "4" : 2,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "30" : 4,
         "13" : 4,
         "5" : 5,
@@ -4658,6 +6356,7 @@
         "6" : 2,
         "31" : 4,
         "14" : 3,
+<<<<<<< HEAD
         "40" : 3,
         "7" : 4,
         "23" : 3,
@@ -4671,6 +6370,21 @@
         "42" : 4,
         "25" : 5,
         "8" : 4,
+=======
+        "7" : 4,
+        "23" : 3,
+        "40" : 3,
+        "32" : 4,
+        "15" : 3,
+        "41" : 3,
+        "8" : 4,
+        "24" : 4,
+        "33" : 5,
+        "9" : 5,
+        "42" : 4,
+        "25" : 5,
+        "16" : 5,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 5,
         "17" : 2,
         "43" : 3,
@@ -4696,13 +6410,22 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "57A55F1A-55CC-4476-B27F-AF7218FA7DB6",
+=======
+      "id" : "0DA135D4-5E90-4D1A-BD7C-91869CEAB999",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u49",
       "responses" : {
         "3" : 5,
         "12" : 1,
+<<<<<<< HEAD
         "21" : 4,
         "4" : 1,
+=======
+        "4" : 1,
+        "21" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "30" : 5,
         "13" : 5,
         "5" : 4,
@@ -4713,6 +6436,7 @@
         "40" : 5,
         "23" : 3,
         "7" : 4,
+<<<<<<< HEAD
         "8" : 4,
         "15" : 5,
         "41" : 4,
@@ -4723,6 +6447,18 @@
         "42" : 4,
         "25" : 4,
         "32" : 5,
+=======
+        "32" : 5,
+        "15" : 5,
+        "41" : 4,
+        "9" : 5,
+        "24" : 4,
+        "33" : 4,
+        "8" : 4,
+        "42" : 4,
+        "25" : 4,
+        "16" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 5,
         "43" : 2,
@@ -4748,7 +6484,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "390FB282-83E3-4C6E-BF0C-543D0C2BE9BC",
+=======
+      "id" : "233D8341-6C15-4DD4-A967-665B098CA38D",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u50",
       "responses" : {
         "3" : 4,
@@ -4756,12 +6496,18 @@
         "21" : 3,
         "4" : 2,
         "30" : 4,
+<<<<<<< HEAD
         "5" : 4,
         "13" : 4,
+=======
+        "13" : 4,
+        "5" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 4,
         "6" : 3,
         "31" : 3,
         "14" : 3,
+<<<<<<< HEAD
         "40" : 4,
         "23" : 3,
         "7" : 4,
@@ -4775,6 +6521,21 @@
         "42" : 4,
         "25" : 3,
         "24" : 4,
+=======
+        "7" : 4,
+        "40" : 4,
+        "23" : 3,
+        "32" : 3,
+        "15" : 4,
+        "41" : 3,
+        "24" : 4,
+        "9" : 4,
+        "33" : 4,
+        "8" : 3,
+        "42" : 4,
+        "25" : 3,
+        "16" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 4,
         "43" : 4,
@@ -4800,20 +6561,33 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "162B05BE-73F0-4223-A835-29C2ED0117F6",
+=======
+      "id" : "48BEE4DC-CB7F-4226-95E8-717A9DF1E2E0",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u51",
       "responses" : {
         "3" : 4,
         "12" : 2,
+<<<<<<< HEAD
         "4" : 2,
         "21" : 4,
         "30" : 4,
         "5" : 4,
         "13" : 4,
+=======
+        "21" : 4,
+        "4" : 2,
+        "30" : 4,
+        "13" : 4,
+        "5" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 4,
         "6" : 2,
         "31" : 3,
         "14" : 3,
+<<<<<<< HEAD
         "7" : 4,
         "23" : 3,
         "40" : 4,
@@ -4822,11 +6596,25 @@
         "8" : 3,
         "24" : 4,
         "9" : 3,
+=======
+        "40" : 4,
+        "7" : 4,
+        "23" : 3,
+        "32" : 4,
+        "15" : 4,
+        "41" : 2,
+        "9" : 3,
+        "24" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "33" : 4,
         "16" : 3,
         "42" : 4,
         "25" : 4,
+<<<<<<< HEAD
         "41" : 2,
+=======
+        "8" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 3,
         "17" : 3,
         "43" : 2,
@@ -4852,7 +6640,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "6F38AE8A-1366-420F-8B34-CC4CC62CB7EA",
+=======
+      "id" : "AD786E0D-2BEC-4127-B404-E40136597EC6",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u52",
       "responses" : {
         "3" : 3,
@@ -4866,19 +6658,32 @@
         "6" : 5,
         "31" : 5,
         "14" : 3,
+<<<<<<< HEAD
         "7" : 1,
         "23" : 5,
         "40" : 5,
         "32" : 4,
         "15" : 4,
         "8" : 3,
+=======
+        "40" : 5,
+        "23" : 5,
+        "7" : 1,
+        "32" : 4,
+        "15" : 4,
+        "41" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "24" : 1,
         "9" : 2,
         "33" : 2,
         "16" : 4,
         "42" : 4,
         "25" : 3,
+<<<<<<< HEAD
         "41" : 4,
+=======
+        "8" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 3,
         "17" : 5,
         "43" : 5,
@@ -4904,7 +6709,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "4F0D8976-EA7C-4036-BDB8-3143C22E93E7",
+=======
+      "id" : "70D846FF-2F8A-4603-BC20-6DBDF6D683E3",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u53",
       "responses" : {
         "3" : 5,
@@ -4912,8 +6721,13 @@
         "21" : 4,
         "4" : 3,
         "30" : 5,
+<<<<<<< HEAD
         "13" : 5,
         "5" : 5,
+=======
+        "5" : 5,
+        "13" : 5,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 4,
         "6" : 5,
         "31" : 5,
@@ -4921,6 +6735,7 @@
         "40" : 5,
         "23" : 3,
         "7" : 4,
+<<<<<<< HEAD
         "8" : 5,
         "15" : 3,
         "41" : 1,
@@ -4931,6 +6746,18 @@
         "42" : 4,
         "25" : 4,
         "32" : 5,
+=======
+        "32" : 5,
+        "15" : 3,
+        "41" : 1,
+        "9" : 2,
+        "8" : 5,
+        "33" : 3,
+        "16" : 2,
+        "42" : 4,
+        "24" : 2,
+        "25" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 1,
         "17" : 5,
         "43" : 5,
@@ -4956,7 +6783,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "9F4F21BF-4C6F-4EB4-8B9C-259820B54862",
+=======
+      "id" : "73B953ED-A894-45B5-9A71-296EAD9FF820",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u56",
       "responses" : {
         "3" : 4,
@@ -4974,6 +6805,7 @@
         "23" : 3,
         "7" : 4,
         "32" : 4,
+<<<<<<< HEAD
         "15" : 4,
         "41" : 2,
         "8" : 3,
@@ -4983,6 +6815,17 @@
         "9" : 4,
         "25" : 4,
         "42" : 4,
+=======
+        "8" : 3,
+        "15" : 4,
+        "24" : 5,
+        "9" : 4,
+        "33" : 4,
+        "16" : 2,
+        "42" : 4,
+        "25" : 4,
+        "41" : 2,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 4,
         "43" : 2,
@@ -5008,7 +6851,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "7BDFDA11-9E9B-4459-A445-CBF1B75192BB",
+=======
+      "id" : "E23AE616-E1E6-4DA5-A154-8BC9B4B28D6D",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u57",
       "responses" : {
         "3" : 4,
@@ -5025,16 +6872,28 @@
         "40" : 2,
         "23" : 3,
         "7" : 4,
+<<<<<<< HEAD
         "8" : 3,
         "15" : 2,
         "41" : 3,
         "24" : 5,
         "32" : 5,
+=======
+        "32" : 5,
+        "8" : 3,
+        "41" : 3,
+        "24" : 5,
+        "9" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "33" : 3,
         "16" : 3,
         "42" : 3,
         "25" : 2,
+<<<<<<< HEAD
         "9" : 4,
+=======
+        "15" : 2,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 4,
         "17" : 5,
         "43" : 3,
@@ -5060,7 +6919,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "265C5CBB-3989-4951-B277-7035AA19ED8F",
+=======
+      "id" : "DE8B08E1-719A-41C3-A584-9747ADE9E488",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u58",
       "responses" : {
         "3" : 2,
@@ -5079,6 +6942,7 @@
         "23" : 5,
         "32" : 5,
         "15" : 3,
+<<<<<<< HEAD
         "41" : 2,
         "8" : 3,
         "24" : 3,
@@ -5087,6 +6951,16 @@
         "42" : 4,
         "16" : 4,
         "25" : 2,
+=======
+        "8" : 3,
+        "24" : 3,
+        "9" : 2,
+        "33" : 5,
+        "16" : 4,
+        "42" : 4,
+        "25" : 2,
+        "41" : 2,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 2,
         "17" : 5,
         "43" : 4,
@@ -5112,7 +6986,11 @@
     },
     {
       "surveyID" : 1,
+<<<<<<< HEAD
       "id" : "83DEE4FD-2DE0-4040-9614-0B5D48E628E6",
+=======
+      "id" : "ADA1A4A3-3AAB-45C2-B0EC-71D4B5ACF9F4",
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
       "uid" : "u59",
       "responses" : {
         "3" : 3,
@@ -5120,12 +6998,18 @@
         "21" : 3,
         "4" : 3,
         "30" : 4,
+<<<<<<< HEAD
         "13" : 4,
         "5" : 3,
+=======
+        "5" : 3,
+        "13" : 4,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "22" : 5,
         "6" : 3,
         "31" : 4,
         "14" : 3,
+<<<<<<< HEAD
         "40" : 5,
         "23" : 5,
         "7" : 4,
@@ -5139,6 +7023,21 @@
         "42" : 2,
         "25" : 3,
         "33" : 4,
+=======
+        "7" : 4,
+        "23" : 5,
+        "40" : 5,
+        "8" : 4,
+        "32" : 5,
+        "41" : 2,
+        "9" : 4,
+        "24" : 5,
+        "33" : 4,
+        "16" : 5,
+        "42" : 2,
+        "25" : 3,
+        "15" : 3,
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
         "34" : 5,
         "17" : 4,
         "43" : 5,
@@ -5161,6 +7060,7 @@
         "20" : 3
       },
       "responseType" : "pre"
+<<<<<<< HEAD
     },
     {
       "surveyID" : 2,
@@ -13968,6 +15868,8 @@
         "2" : 1
       },
       "responseType" : "post"
+=======
+>>>>>>> b425a67 (Fixed Missing White Space in Survey Questions and Responses)
     }
   ]
 }
