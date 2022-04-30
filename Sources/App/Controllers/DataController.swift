@@ -13,7 +13,7 @@ enum DataControllerError : Error {
     case StorageError(message: String)
 }
 
-actor DataController {
+class DataController {
 
     private let data = ServerData()
     private let fileController: FileController
@@ -23,77 +23,89 @@ actor DataController {
     init(_ app: Application) {
         self.app = app
         self.fileController = FileController(app)
+
+        do {
+            let surveys = [
+                try fileController.loadSurvey(id: 1, name: "Big Five", group: "I see myself as"),
+                try fileController.loadSurvey(id: 2, name: "Flourishing Scale", group: "Flourishing Scale"),
+                try fileController.loadSurvey(id: 3, name: "Loneliness Scale", group: "Loneliness Scale"),
+                try fileController.loadSurvey(id: 4, name: "Positive and Negative Affect Schedule", group: "PANAS"),
+                try fileController.loadSurvey(id: 5, name: "Perceived Stress Scale", group: "In the last month how often have you been"),
+                try fileController.loadSurvey(id: 6, name: "Patient Health Questionnaire-9", group: "PHQ-9")
+            ]
+
+            for surveyID in 1...surveys.count  {
+                guard let _ = try? data.storeSurvey(surveys[surveyID - 1]) else { return }
+                let responses = try fileController.loadResponses(surveyID: surveyID)
+                guard let _ = try? data.writeSurveyResponses(responses) else { return }
+            }
+
+            let _ = try backup()
+            app.logger.info("Successfully Loaded Survey Data and Responses")
+
+        } catch let error {
+            app.logger.report(error: error)
+        }
     }
 
-    /**
-     This function begins the process of reading survey files and updating the ServerData Actor
-     - Returns: Bool representing if reading and storing succeeded
-     */
-    func initialize() async throws -> Bool {
+//    /**
+//     This function begins the process of reading survey files and updating the ServerData Actor
+//     - Returns: Bool representing if reading and storing succeeded
+//     */
+//    func initialize() async throws -> Bool {
+//
+//        // Load Survey 1
+//
+//
+//        return true
+//    }
 
-        // Load Survey 1
-        let survey1 = try await fileController.loadSurvey(id: 1, name: "Big Five", group: "I see myself as")
-        guard let _ = try? await data.storeSurvey(survey1) else { return false }
-
-
-        // Load Survey 1 Responses
-        let responses = try await fileController.loadResponses(surveyID: 1)
-        guard let _ = try? await data.writeSurveyResponses(responses) else { return false }
-
-        // Create Initial Backup
-        let _ = try await backup()
-
-        app.logger.info("Successfully Loaded Survey Data and Responses")
-
-        return true
+    func getSurveyResponses(uid: String) throws -> [SurveyResponse] {
+        return data.filterSurveyResponses({$0.uid == uid})
     }
 
-    func getSurveyResponses(uid: String) async throws -> [SurveyResponse] {
-        return await data.filterSurveyResponses({$0.uid == uid})
+    func getSurveyResponse(id: UUID) throws -> SurveyResponse? {
+        return data.firstSurveyResponse(where: {$0.id == id})
     }
 
-    func getSurveyResponse(id: UUID) async throws -> SurveyResponse? {
-        return await data.firstSurveyResponse(where: {$0.id == id})
+    func getSurveys() throws -> [Survey] {
+        return data.filterSurveys({_ in true})
     }
 
-    func getSurveys() async throws -> [Survey] {
-        return await data.filterSurveys({_ in true})
+    func createResponse(response: SurveyResponse) throws -> Bool {
+        return try data.storeSurveyResponse(response)
     }
 
-    func createResponse(response: SurveyResponse) async throws -> Bool {
-        return try await data.storeSurveyResponse(response)
+    func updateResponse(response: SurveyResponse) throws -> Bool {
+        return try data.storeSurveyResponse(response)
     }
 
-    func updateResponse(response: SurveyResponse) async throws -> Bool {
-        return try await data.storeSurveyResponse(response)
-    }
-
-    func deleteResponse(id: UUID) async throws -> Bool {
+    func deleteResponse(id: UUID) throws -> Bool {
         app.logger.critical("Data Controller: Atetmpting to delete")
-        return await data.deleteSurveyResponse(id: id)
+        return data.deleteSurveyResponse(id: id)
     }
 
-    func backup() async throws -> Bool {
+    func backup() throws -> Bool {
         app.logger.info("Getting list of surveys and responses")
-        async let surveys =  data.filterSurveys({ _ in true })
-        async let surveyResponses = data.filterSurveyResponses({ _ in true })
-        let snapshot = await DataSnapshot(surveys: surveys, surveyResponses: surveyResponses)
+        let surveys =  data.filterSurveys({ _ in true })
+        let surveyResponses = data.filterSurveyResponses({ _ in true })
+        let snapshot = DataSnapshot(surveys: surveys, surveyResponses: surveyResponses)
         app.logger.info("Snapshot Created")
 
-        if let success = try? await fileController.backup(snapshot: snapshot) {
+        if let success = try? fileController.backup(snapshot: snapshot) {
             return success
         } else { return false}
     }
 
-    func loadBackup() async throws -> Bool {
-        if let snapshot = await fileController.getBackup() {
+    func loadBackup() throws -> Bool {
+        if let snapshot = fileController.getBackup() {
 
             let dateFormatter = DateFormatter()
             dateFormatter.locale = Locale(identifier: "en_US")
             app.logger.info("Loading snapshot from \(dateFormatter.string(from: snapshot.date))")
 
-            if let responseSuccess = try? await data.writeSurveyResponses(snapshot.surveyResponses) {
-                if let surveySuccess = try? await data.writeSurveys(snapshot.surveys) {
+            if let responseSuccess = try? data.writeSurveyResponses(snapshot.surveyResponses) {
+                if let surveySuccess = try? data.writeSurveys(snapshot.surveys) {
                     return responseSuccess && surveySuccess
                 }
             }

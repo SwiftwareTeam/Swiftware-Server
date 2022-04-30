@@ -27,7 +27,7 @@ final class AppTests: XCTestCase {
             XCTAssertEqual(res.status, .created)
         })
 
-        if let responseFromController = try? await app.dataController?.getSurveyResponse(id: surveyResponse.id) {
+        if let responseFromController = try? app.dataController?.getSurveyResponse(id: surveyResponse.id) {
             XCTAssertEqual(responseFromController, surveyResponse)
         }
 
@@ -62,7 +62,7 @@ final class AppTests: XCTestCase {
             XCTAssertEqual(resp.status, .ok)
         })
 
-        if let survey = try await app.dataController?.getSurveyResponse(id: surveyResponse.id) {
+        if let survey = try app.dataController?.getSurveyResponse(id: surveyResponse.id) {
             XCTAssertEqual(survey.responses[1], nil)
             XCTAssertEqual(survey.responses[2], 3)
         } else {
@@ -89,7 +89,7 @@ final class AppTests: XCTestCase {
             XCTAssertEqual(resp.status, .ok)
         })
 
-        let responseInDatabase: SurveyResponse? = try await app.dataController?.getSurveyResponse(id: surveyResponse.id)
+        let responseInDatabase: SurveyResponse? = try  app.dataController?.getSurveyResponse(id: surveyResponse.id)
         XCTAssertNil(responseInDatabase)
     }
     func testBackup() async throws {

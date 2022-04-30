@@ -12,9 +12,9 @@ public func configure(_ app: Application) throws {
 
     app.dataController = .init(app)
 
-    Task {
-        try await app.dataController?.initialize()
-    }
+//    Task {
+//        try await app.dataController?.initialize()
+//    }
 
     // register routes
     try routes(app)
