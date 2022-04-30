@@ -111,4 +111,14 @@ final class AppTests: XCTestCase {
             XCTAssertEqual(resp.status, .ok)
         })
     }
+
+    func testAvgResponseRate() throws {
+        let app = Application(.testing)
+        defer { app.shutdown() }
+        try configure(app)
+
+        try app.test(.GET, "avgResponseRate/1", afterResponse: { resp in
+            XCTAssertEqual(resp.status, .ok)
+        })
+    }
 }
