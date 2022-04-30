@@ -16,19 +16,19 @@ final class ServerDataTests : XCTestCase {
         let sampleData = SampleData()
 
         // Test Retrieval when empty
-        let nullSurvey = await data.firstSurvey(where: {_ in true})
+        let nullSurvey = data.firstSurvey(where: {_ in true})
         XCTAssertNil(nullSurvey)
 
         // Test Insert & Retrieval when unique value
         var sampleSurvey = sampleData.survey
-        try await data.storeSurvey(sampleSurvey)
-        var retrievedSurvey: Survey? = await data.firstSurvey(where: { $0.id == sampleSurvey.id })
+        try data.storeSurvey(sampleSurvey)
+        var retrievedSurvey: Survey? = data.firstSurvey(where: { $0.id == sampleSurvey.id })
         XCTAssertEqual(retrievedSurvey, sampleSurvey)
 
         // Test Insert when existing value
         sampleSurvey.name = "Modified Test Survey"
-        try await data.storeSurvey(sampleSurvey)
-        retrievedSurvey = await data.firstSurvey(where: {$0.id == sampleSurvey.id})
+        try data.storeSurvey(sampleSurvey)
+        retrievedSurvey = data.firstSurvey(where: {$0.id == sampleSurvey.id})
         XCTAssertEqual(retrievedSurvey?.name, "Modified Test Survey")
     }
 
@@ -44,7 +44,7 @@ final class ServerDataTests : XCTestCase {
                     let number = Int.random(in: 1...100)
                     let randomName = "Test \(number)"
 
-                   try await data.storeSurvey(Survey(id: survey1.id, name: randomName, group: survey1.group,
+                   try data.storeSurvey(Survey(id: survey1.id, name: randomName, group: survey1.group,
                                                       questions: survey1.questions, answers: survey1.answers))
                 }
             }
@@ -65,11 +65,11 @@ final class DataControllerTests : XCTestCase {
 
         let controller = DataController(app)
 
-        if let succeeded = try? await controller.initialize() {
-            XCTAssertTrue(succeeded)
-        }
+//        if let succeeded = try? await controller.initialize() {
+//            XCTAssertTrue(succeeded)
+//        }
 
-        guard let responses = try? await controller.getSurveyResponses(uid: "u00") else {
+        guard let responses = try? controller.getSurveyResponses(uid: "u00") else {
             XCTFail()
             return
         }

@@ -10,14 +10,14 @@ import Foundation
 /**
   An object which stores data collections used by the vapor server.
  */
-actor ServerData {
+class ServerData {
     /// Array of Surveys
     private var surveys = [Survey]()
 
     /// Array of Survey Responses
     private var surveyResponses = [SurveyResponse]()
 
-    let lock = NSLock()
+    private var queue = DispatchQueue(label: "ServerData.queue", attributes: .concurrent)
 
     /**
      Inserts a Survey into the `ServerData.surveys` array. If a survey with
@@ -27,13 +27,15 @@ actor ServerData {
      - Complexity: O(*n*) where *n* is the size of the survey array
      */
     func storeSurvey(_ newSurvey: Survey) throws {
-        for (index, existingSurvey) in surveys.enumerated() {
-            if existingSurvey.id == newSurvey.id {
-                surveys[index] = newSurvey
-                return
+        queue.sync(flags: .barrier) {
+            for (index, existingSurvey) in surveys.enumerated() {
+                if existingSurvey.id == newSurvey.id {
+                    surveys[index] = newSurvey
+                    return
+                }
             }
+            surveys.append(newSurvey)
         }
-        surveys.append(newSurvey)
     }
 
     /**
@@ -44,24 +46,31 @@ actor ServerData {
      - Complexity: O(*n*) where *n* is the size of the survey response array
      */
     func storeSurveyResponse(_ newResponse: SurveyResponse) throws -> Bool {
-        for (index, existingResponse) in surveyResponses.enumerated() {
-            if existingResponse.id == newResponse.id {
-                surveyResponses[index] = newResponse
+        queue.sync(flags: .barrier) {
+            for (index, existingResponse) in surveyResponses.enumerated() {
+                if existingResponse.id == newResponse.id {
+                    surveyResponses[index] = newResponse
+                }
             }
+            surveyResponses.append(newResponse)
         }
-        surveyResponses.append(newResponse)
-
         return true
     }
 
     func writeSurveyResponses(_ responses: [SurveyResponse]) throws -> Bool {
-        self.surveyResponses = responses
-        return true
+        queue.sync(flags: .barrier) {
+            self.surveyResponses += responses
+            return true
+        }
+
     }
 
-    func writeSurveys(_ surveys: [Survey]) async throws -> Bool {
-        self.surveys = surveys
-        return true
+    func writeSurveys(_ surveys: [Survey]) throws -> Bool {
+        queue.sync(flags: .barrier) {
+            self.surveys = surveys
+            return true
+        }
+
     }
 
         /**
@@ -76,10 +85,12 @@ actor ServerData {
          - Complexity: O(*n*) where *n* is the size of the survey array
          */
     func firstSurvey(where predicate: (Survey) throws -> Bool) rethrows -> Survey? {
-        for survey in surveys {
-            if try predicate(survey) { return survey }
+        try queue.sync(flags: .barrier) {
+            for survey in surveys {
+                if try predicate(survey) { return survey }
+            }
+            return nil
         }
-        return nil
     }
 
     /**
@@ -94,16 +105,16 @@ actor ServerData {
      - Complexity: O(*n*) where *n* is the size of the survey response array
      */
     func firstSurveyResponse(where predicate: (SurveyResponse) throws -> Bool) rethrows -> SurveyResponse? {
-        var returnResponse: SurveyResponse? = nil
-        lock.lock()
-        for response in surveyResponses {
-            if try predicate(response) {
-                returnResponse = response
-                break
+        try queue.sync(flags: .barrier) {
+            var returnResponse: SurveyResponse? = nil
+            for response in surveyResponses {
+                if try predicate(response) {
+                    returnResponse = response
+                    break
+                }
             }
+            return returnResponse
         }
-        lock.unlock()
-        return returnResponse
     }
 
     /**
@@ -115,7 +126,10 @@ actor ServerData {
      - Complexity: O(*n*) where *n* is the size of the survey array
      */
     func filterSurveys(_ isIncluded: (Survey) throws -> Bool) rethrows -> [Survey] {
-        return try surveys.filter(isIncluded)
+        try queue.sync(flags: .barrier) {
+            return try surveys.filter(isIncluded)
+        }
+
     }
 
     /**
@@ -127,29 +141,30 @@ actor ServerData {
      - Complexity: O(*n*) where *n* is the size of the survey response array
      */
     func filterSurveyResponses(_ isIncluded: (SurveyResponse) throws -> Bool) rethrows -> [SurveyResponse] {
-        return try surveyResponses.filter(isIncluded)
+        try queue.sync(flags: .barrier) {
+            return try surveyResponses.filter(isIncluded)
+        }
     }
 
     func deleteSurveyResponse(id: UUID) -> Bool {
-        lock.lock()
-        var mutableResponses = self.surveyResponses
+        queue.sync(flags: .barrier) {
+            var mutableResponses = self.surveyResponses
 
-        var indexToRemove: Int = -1
-        for (index, response) in mutableResponses.enumerated() {
-            if response.id == id {
-                indexToRemove = index
-                break
+            var indexToRemove: Int = -1
+            for (index, response) in mutableResponses.enumerated() {
+                if response.id == id {
+                    indexToRemove = index
+                    break
+                }
             }
-        }
-        if indexToRemove >= 0 {
-            print("Attempting to remove")
-            mutableResponses.remove(at: indexToRemove)
-            self.surveyResponses = mutableResponses
-            lock.unlock()
-            return true
-        } else {
-            lock.unlock()
-            return false
+            if indexToRemove >= 0 {
+                print("Attempting to remove")
+                mutableResponses.remove(at: indexToRemove)
+                self.surveyResponses = mutableResponses
+                return true
+            } else {
+                return false
+            }
         }
     }
 

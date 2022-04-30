@@ -14,7 +14,7 @@ func routes(_ app: Application) throws {
             throw Abort(.notFound, reason: "Unable to find uid")
         }
 
-        if let responses = try? await app.dataController?.getSurveyResponses(uid: uid) {
+        if let responses = try? app.dataController?.getSurveyResponses(uid: uid) {
             return responses
         } else {
             throw Abort(.internalServerError)
@@ -22,7 +22,7 @@ func routes(_ app: Application) throws {
     }
 
     app.get("getSurveys") { req -> [Survey] in
-        if let surveys = try? await app.dataController?.getSurveys() {
+        if let surveys = try? app.dataController?.getSurveys() {
             return surveys
         } else {
             throw Abort(.internalServerError)
@@ -40,7 +40,7 @@ func routes(_ app: Application) throws {
             throw Abort(.badRequest, reason: "Not a valid Survey Response Object")
         }
 
-        if (try? await app.dataController?.createResponse(response: surveyResponse)) == nil {
+        if (try? app.dataController?.createResponse(response: surveyResponse)) == nil {
             throw Abort(.internalServerError, reason: "Unable to add survey response to app data")
         } else {
             req.logger.info("Successfully Inserted SurveyResponse")
@@ -59,7 +59,7 @@ func routes(_ app: Application) throws {
             throw Abort(.badRequest, reason: "Not a valid Survey Response Object")
         }
 
-        if (try? await app.dataController?.updateResponse(response: surveyResponse)) == nil {
+        if (try? app.dataController?.updateResponse(response: surveyResponse)) == nil {
             throw Abort(.internalServerError, reason: "Unable to Update Survey Response in App Data")
         } else {
             req.logger.info("Successfully updated Survey Response")
@@ -77,7 +77,7 @@ func routes(_ app: Application) throws {
             throw Abort(.badRequest, reason: "Nota a valid UUID")
         }
         app.logger.info("Attempting to Delete Response")
-        if (try? await app.dataController?.deleteResponse(id: surveyResponse.id)) == true {
+        if (try? app.dataController?.deleteResponse(id: surveyResponse.id)) == true {
             return Response(status: .ok)
         } else {
             throw Abort(.notFound, reason: "UUID Not Found in Response List")
@@ -85,7 +85,7 @@ func routes(_ app: Application) throws {
     }
 
     app.get("backup") { req -> Response in
-        if (try? await app.dataController?.backup()) == true {
+        if (try? app.dataController?.backup()) == true {
             return Response(status: .ok)
         } else {
             throw Abort(.internalServerError, reason: "Unable to perform backup")
@@ -93,7 +93,7 @@ func routes(_ app: Application) throws {
     }
 
     app.get("loadBackup") { req -> Response in
-        if (try? await app.dataController?.loadBackup()) == true {
+        if (try? app.dataController?.loadBackup()) == true {
             return Response(status: .ok)
         } else {
             throw Abort(.internalServerError, reason: "Unable to load backup")

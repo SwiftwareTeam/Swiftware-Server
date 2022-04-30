@@ -17,7 +17,7 @@ enum FileControllerError : Error {
  - **baseDir**: The base directory is a string which consists of
  the current working directory plus the portion of the filename which begins `"Survey\(id)"`. eg. `/currentdirectory/Survey1`
  */
-actor FileController {
+class FileController {
 
     private var baseDir: String
     private let app: Application
@@ -150,16 +150,19 @@ actor FileController {
 
               dataArray.remove(at: 0) // Remove header
 
-              var id: Int
-              var value: Int
+//              var id: Int
+//              var value: Int
 
               for row in dataArray {
 
                   // Convert id and value into Integers
-                  id = Int(row[0])!
-                  value = Int(row[2])!
+                  if let id = Int(row[0]) {
+                      if let value = Int(row[2]) {
+                          answers[id] = Answer(id: id, label: row[1], value: value)
 
-                  answers[id] = Answer(id: id, label: row[1], value: value)
+                      }
+                  }
+
               }
 
           } else {
@@ -181,7 +184,10 @@ actor FileController {
         var responses = [SurveyResponse]()
 
         do {
-          let data = try Data(contentsOf: url) // Create saved data buffer
+            guard let data = try? Data(contentsOf: url) else {
+                app.logger.error("Unable to read data for survey \(id)")
+                return []
+            }
 
           // Convert Data Buffer into String
           if let dataString = String(data: data, encoding: .utf8) {
@@ -264,7 +270,7 @@ actor FileController {
 
     }
 
-    func backup(snapshot: DataSnapshot) async throws -> Bool {
+    func backup(snapshot: DataSnapshot) throws -> Bool {
         encoder.outputFormatting = .prettyPrinted
 
         do {
