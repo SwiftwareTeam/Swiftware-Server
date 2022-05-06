@@ -72,6 +72,10 @@ class DataController {
         return data.filterSurveys({_ in true})
     }
 
+    func getUsers() throws -> [String] {
+        return Array(Set(data.filterSurveyResponses({_ in true}).map{ $0.uid })).sorted()
+    }
+
     func createResponse(response: SurveyResponse) throws -> Bool {
         return try data.storeSurveyResponse(response)
     }

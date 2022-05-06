@@ -114,4 +114,12 @@ func routes(_ app: Application) throws {
             throw Abort(.internalServerError)
         }
     }
+
+    app.get("getUsers") { req -> [String] in
+        if let users = try app.dataController?.getUsers() {
+            return users
+        } else {
+            throw Abort(.internalServerError)
+        }
+    }
 }
