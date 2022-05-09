@@ -89,6 +89,21 @@ class DataController {
         return data.deleteSurveyResponse(id: id)
     }
 
+    // TODO: Implement Function (Remove placeholder return statement)
+    func personalityScore(forUser uid: String) throws -> PersonalityScore {
+
+        /// Temporary placeholder
+        return PersonalityScore(surveyID: 1,
+                                userID: "u00",
+                                responseID: UUID(),
+                                categories: ["Openness",
+                                             "Conscientiousness",
+                                             "Extraversion",
+                                             "Agreeableness",
+                                             "Neuroticism",],
+                                scores: [0.73, 0.40, 0.46, 0.85, 0.40])
+    }
+
     func backup() throws -> Bool {
         app.logger.info("Getting list of surveys and responses")
         let surveys =  data.filterSurveys({ _ in true })

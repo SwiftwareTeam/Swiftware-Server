@@ -121,4 +121,9 @@ final class AppTests: XCTestCase {
             XCTAssertEqual(resp.status, .ok)
         })
     }
+
+    // TODO: Implement Tests for Personlity Scores Endpoint
+    func testPersonalityScores() throws {
+
+    }
 }

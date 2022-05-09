@@ -1,4 +1,5 @@
 import Vapor
+import Foundation
 
 func routes(_ app: Application) throws {
     app.get { req in
@@ -118,6 +119,18 @@ func routes(_ app: Application) throws {
     app.get("getUsers") { req -> [String] in
         if let users = try app.dataController?.getUsers() {
             return users
+        } else {
+            throw Abort(.internalServerError)
+        }
+    }
+
+    app.get("getPersonalityScore", ":userID") { req -> PersonalityScore in
+        guard let uid = req.parameters.get("userID") else {
+            throw Abort(.notFound, reason: "Parameter userID not found")
+        }
+
+        if let personalityScore = try? app.dataController?.personalityScore(forUser: uid) {
+            return personalityScore
         } else {
             throw Abort(.internalServerError)
         }
