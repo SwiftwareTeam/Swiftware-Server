@@ -129,6 +129,10 @@ func routes(_ app: Application) throws {
             throw Abort(.notFound, reason: "Parameter userID not found")
         }
 
+        guard try app.dataController?.responseExists(forUser: uid) == true else {
+            throw Abort(.notFound, reason: "No survey Response exists for user: \(uid)")
+        }
+
         if let personalityScore = try? app.dataController?.personalityScore(forUser: uid) {
             return personalityScore
         } else {
