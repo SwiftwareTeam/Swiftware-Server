@@ -48,18 +48,6 @@ class DataController {
         }
     }
 
-//    /**
-//     This function begins the process of reading survey files and updating the ServerData Actor
-//     - Returns: Bool representing if reading and storing succeeded
-//     */
-//    func initialize() async throws -> Bool {
-//
-//        // Load Survey 1
-//
-//
-//        return true
-//    }
-
     func getSurveyResponses(uid: String) throws -> [SurveyResponse] {
         return data.filterSurveyResponses({$0.uid == uid})
     }
@@ -87,6 +75,112 @@ class DataController {
     func deleteResponse(id: UUID) throws -> Bool {
         app.logger.critical("Data Controller: Atetmpting to delete")
         return data.deleteSurveyResponse(id: id)
+    }
+
+    func responseExists(forUser uid: String) throws -> Bool {
+        return data.firstSurveyResponse(where: { $0.uid == uid } ) != nil
+    }
+
+    /// This is a helper function used to reverse an Answer Choice for Personality Test Analysis.
+    /// For example, on a scale of 1 to 5, 1 becomes 5, 2 becomes 4, and so on.
+    func reverse(_ score: Int, maxScore: Int = 5) -> Int {
+        return maxScore - score + 1
+    }
+
+    // TODO: Implement Function (Remove placeholder return statement)
+    func personalityScore(forUser uid: String) throws -> PersonalityScore? {
+
+        /// Mark: - Retrieve Response for Personality Test Calculation
+        guard let responses = try? self.getSurveyResponses(uid: uid) else { return nil }
+        var responseForCalculation: SurveyResponse
+        let postResponses = responses.filter { $0.responseType == "post" }
+
+        /// Ideally select the first response of type post, otherwise, just select the first response
+        if postResponses.count > 0 {
+            responseForCalculation = postResponses[0]
+        } else {
+            responseForCalculation = responses[0]
+        }
+
+        /// Mark: - Unpack Answers for Response
+        let answers = responseForCalculation.responses.values
+
+        /// Formulas for analyzing the big five test use indexing at 1 instead of 0, so
+        /// a dummy value in inserted at index 0 for clarity
+        var unpackedAnswers = [0]
+
+        /// Unpack the optionals from answers into new array
+        for answer in answers {
+            if let unpackedAnswer: Int = answer {
+                unpackedAnswers.append(unpackedAnswer)
+            } else {
+                unpackedAnswers.append(3) /// Append the median value of 3
+            }
+        }
+
+        /// Mark: - Calculate the Response
+        ///
+        /// R after question means the answer should be reversed
+        /// All values for each category are added together, then divided by 40
+
+        /// Extraversion : 1, 6R, 11, 16, 21R, 26, 31R, 36
+        let extraversion = unpackedAnswers[1] + reverse(unpackedAnswers[6])
+          + unpackedAnswers[11] + unpackedAnswers[16]
+          + reverse(unpackedAnswers[21]) + unpackedAnswers[26]
+          + reverse(unpackedAnswers[31]) + unpackedAnswers[36]
+
+        /// Agreeableness: 2R, 7, 12R, 17, 22, 27R, 32, 37R, 42
+        let agreeableness = reverse(unpackedAnswers[2]) + unpackedAnswers[7]
+          + reverse(unpackedAnswers[12]) + unpackedAnswers[17]
+          + unpackedAnswers[22] + reverse(unpackedAnswers[27])
+          + unpackedAnswers[32] + reverse(unpackedAnswers[37])
+          + unpackedAnswers[42]
+
+        /// Conscientiousness: 3, 8R, 13, 18R, 23R, 28, 33, 38, 43R
+        let conscientiousness = unpackedAnswers[3] + reverse(unpackedAnswers[8])
+          + unpackedAnswers[13] + reverse(unpackedAnswers[18])
+          + reverse(unpackedAnswers[23]) + unpackedAnswers[28]
+          + unpackedAnswers[33] + unpackedAnswers[38]
+          + reverse(unpackedAnswers[43])
+
+        /// Neuroticism: 4, 9R, 14, 19, 24R, 29, 34R, 39
+        let neuroticism = unpackedAnswers[4] + reverse(unpackedAnswers[9])
+          + unpackedAnswers[14] + unpackedAnswers[19]
+          + reverse(unpackedAnswers[24]) + unpackedAnswers[29]
+          + reverse(unpackedAnswers[34]) + unpackedAnswers[39]
+
+
+        /// Openness: 5, 10, 15, 20, 25, 30, 35R, 40, 41R, 44
+        let openness = unpackedAnswers[5] + unpackedAnswers[10]
+          + unpackedAnswers[15] + unpackedAnswers[20]
+          + unpackedAnswers[25] + unpackedAnswers[30]
+          + reverse(unpackedAnswers[35]) + unpackedAnswers[40]
+          + reverse(unpackedAnswers[41]) + unpackedAnswers[44]
+
+        return PersonalityScore(surveyID: 1,
+                                userID: uid,
+                                responseID: responseForCalculation.id,
+                                categories: ["Extraversion",
+                                             "Agreeableness",
+                                             "Conscientiousness",
+                                             "Neuroticism",
+                                             "Openness",],
+                                scores: [Double(extraversion) / 40.0,
+                                         Double(agreeableness) / 40.0,
+                                         Double(conscientiousness) / 40.0,
+                                         Double(neuroticism) / 40.0,
+                                         Double(openness) / 40.0])
+
+//        /// Temporary placeholder
+//        return PersonalityScore(surveyID: 1,
+//                                userID: "u00",
+//                                responseID: UUID(),
+//                                categories: ["Openness",
+//                                             "Conscientiousness",
+//                                             "Extraversion",
+//                                             "Agreeableness",
+//                                             "Neuroticism",],
+//                                scores: [0.73, 0.40, 0.46, 0.85, 0.40])
     }
 
     func backup() throws -> Bool {

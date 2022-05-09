@@ -56,6 +56,11 @@ final class ServerDataTests : XCTestCase {
 
         XCTAssertTrue(true)
     }
+
+    // TODO: Implement Test for DataController function
+    func testPersonalityScore() throws {
+
+    }
 }
 
 final class DataControllerTests : XCTestCase {
