@@ -124,6 +124,23 @@ final class AppTests: XCTestCase {
 
     // TODO: Implement Tests for Personlity Scores Endpoint
     func testPersonalityScores() throws {
-
-    }
+        let app = Application(.testing)
+        defer { app.shutdown() }
+        try configure(app)
+        var sampleScore = PersonalityScore(surveyID: 1, userID: "u00", responseID: UUID(),categories: ["Extraversion", "Agreeableness", "Conscientiousness", "Neuroticism", "Openness"], scores: [0.625, 0.7, 0.75, 0.85, 0.4])
+                                                                                                        
+        if let score = try app.dataController?.personalityScore(forUser: "u00"){
+            sampleScore.scores = score.scores
+            XCTAssertEqual(sampleScore.surveyID, score.surveyID)
+            XCTAssertEqual(sampleScore.userID, score.userID)
+            XCTAssertEqual(sampleScore.categories, score.categories)
+            XCTAssertEqual(sampleScore.scores, score.scores)
+            
+        } else {
+            XCTFail()
+        }
+            
+        }
+    
+    
 }
