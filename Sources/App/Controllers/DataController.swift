@@ -38,7 +38,7 @@ class DataController {
             for surveyID in 1...surveys.count {
                 try data.storeSurvey(surveys[surveyID - 1])
                 let responses = try fileController.loadResponses(surveyID: surveyID)
-                try data.writeSurveyResponses(responses)
+                _ = try data.writeSurveyResponses(responses)
             }
 
             _ = try backup()
