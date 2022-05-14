@@ -28,11 +28,9 @@ class ServerData {
      */
     func storeSurvey(_ newSurvey: Survey) throws {
         queue.sync(flags: .barrier) {
-            for (index, existingSurvey) in surveys.enumerated() {
-                if existingSurvey.id == newSurvey.id {
-                    surveys[index] = newSurvey
-                    return
-                }
+            for (index, existingSurvey) in surveys.enumerated() where existingSurvey.id == newSurvey.id {
+                surveys[index] = newSurvey
+                return
             }
             surveys.append(newSurvey)
         }
@@ -47,10 +45,8 @@ class ServerData {
      */
     func storeSurveyResponse(_ newResponse: SurveyResponse) throws -> Bool {
         queue.sync(flags: .barrier) {
-            for (index, existingResponse) in surveyResponses.enumerated() {
-                if existingResponse.id == newResponse.id {
-                    surveyResponses[index] = newResponse
-                }
+            for (index, existingResponse) in surveyResponses.enumerated() where existingResponse.id == newResponse.id {
+                surveyResponses[index] = newResponse
             }
             surveyResponses.append(newResponse)
         }
@@ -106,7 +102,7 @@ class ServerData {
      */
     func firstSurveyResponse(where predicate: (SurveyResponse) throws -> Bool) rethrows -> SurveyResponse? {
         try queue.sync(flags: .barrier) {
-            var returnResponse: SurveyResponse? = nil
+            var returnResponse: SurveyResponse?
             for response in surveyResponses {
                 if try predicate(response) {
                     returnResponse = response
@@ -133,7 +129,8 @@ class ServerData {
     }
 
     /**
-     Returns an array containing, in order, the elements of `ServerData.surveyResponses` that satisfy the given predicate.
+     Returns an array containing, in order, the elements of `ServerData.surveyResponses` that
+     satisfy the given predicate.
 
      - Parameter isIncluded: A closure that takes an element of the survey response array as its argument
      and returns a Boolean value indicating whether the element should be included in the returned array.
@@ -151,11 +148,9 @@ class ServerData {
             var mutableResponses = self.surveyResponses
 
             var indexToRemove: Int = -1
-            for (index, response) in mutableResponses.enumerated() {
-                if response.id == id {
-                    indexToRemove = index
-                    break
-                }
+            for (index, response) in mutableResponses.enumerated() where response.id == id {
+                indexToRemove = index
+                break
             }
             if indexToRemove >= 0 {
                 print("Attempting to remove")

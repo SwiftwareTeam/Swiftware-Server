@@ -33,7 +33,7 @@ struct SampleData {
                              questions: [1: question1],
                              answers: [1: answer1, 2: answer2])
 
-        let survey2 = Survey(id:2, name: "A different Test Survey", group: "Test Group",
+        let survey2 = Survey(id: 2, name: "A different Test Survey", group: "Test Group",
                              questions: [1: question1, 2: question2],
                              answers: [1: answer1, 2: answer2, 3: answer3, 4: answer4, 5: answer5])
 

@@ -24,6 +24,6 @@ struct Survey: Content, Equatable {
     var id: Int
     var name: String
     var group: String
-    var questions: [Int : Question] // QuestionID: Question
-    var answers: [Int : Answer] // AnswerID: Answer
+    var questions: [Int: Question] // QuestionID: Question
+    var answers: [Int: Answer] // AnswerID: Answer
 }

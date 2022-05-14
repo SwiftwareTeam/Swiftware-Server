@@ -6,7 +6,7 @@ func routes(_ app: Application) throws {
         return req.view.render("index", ["title": "Hello Vapor!"])
     }
 
-    app.get("hello") { req -> String in
+    app.get("hello") { _ -> String in
         return "Hello, world!"
     }
 
@@ -22,7 +22,7 @@ func routes(_ app: Application) throws {
         }
     }
 
-    app.get("getSurveys") { req -> [Survey] in
+    app.get("getSurveys") { _ -> [Survey] in
         if let surveys = try? app.dataController?.getSurveys() {
             return surveys
         } else {
@@ -67,7 +67,7 @@ func routes(_ app: Application) throws {
             return Response(status: .ok)
         }
     }
-    
+
     app.delete("deleteResponse") { req -> Response in
         if app.dataController == nil {
             req.logger.error("Data Controller not Initialized")
@@ -85,7 +85,7 @@ func routes(_ app: Application) throws {
         }
     }
 
-    app.get("backup") { req -> Response in
+    app.get("backup") { _ -> Response in
         if (try? app.dataController?.backup()) == true {
             return Response(status: .ok)
         } else {
@@ -93,7 +93,7 @@ func routes(_ app: Application) throws {
         }
     }
 
-    app.get("loadBackup") { req -> Response in
+    app.get("loadBackup") { _ -> Response in
         if (try? app.dataController?.loadBackup()) == true {
             return Response(status: .ok)
         } else {
@@ -101,7 +101,7 @@ func routes(_ app: Application) throws {
         }
     }
 
-    app.get("avgResponseRate",":surveyID") { req -> [ChartData] in
+    app.get("avgResponseRate", ":surveyID") { req -> [ChartData] in
         guard let surveyIDString = req.parameters.get("surveyID") else {
             throw Abort(.badRequest)
         }
@@ -116,7 +116,7 @@ func routes(_ app: Application) throws {
         }
     }
 
-    app.get("getUsers") { req -> [String] in
+    app.get("getUsers") { _ -> [String] in
         if let users = try app.dataController?.getUsers() {
             return users
         } else {

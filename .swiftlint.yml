@@ -1,0 +1,9 @@
+included:
+
+excluded:
+  - .build
+  - .swiftpm
+  - .github
+  - .git
+  - Package.swift
+  - Sources/App/routes.swift

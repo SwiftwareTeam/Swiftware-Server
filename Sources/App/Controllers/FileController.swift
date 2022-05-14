@@ -8,15 +8,14 @@
 import Foundation
 import Vapor
 
-enum FileControllerError : Error {
-    case ReadError(message: String)
-    case ConversionError(message: String)
+enum FileControllerError: Error {
+    case readError(message: String)
+    case conversionError(message: String)
 }
 
-/**
- - **baseDir**: The base directory is a string which consists of
- the current working directory plus the portion of the filename which begins `"Survey\(id)"`. eg. `/currentdirectory/Survey1`
- */
+/// - **baseDir**: The base directory is a string which consists of
+/// the current working directory plus the portion of the filename which begins
+/// `"Survey\(id)"`. eg. `/currentdirectory/Survey1`
 class FileController {
 
     private var baseDir: String
@@ -68,11 +67,9 @@ class FileController {
                 // Create Array of Strings consisting of each line
                 let lines: [String] = dataString.components(separatedBy: "\n")
 
-
                 // 2D Array in which each row is an array of columns for the given row in the sheet
                 // Outer Array represents a line or row from the csv file
                 var dataArray = [[String]]()
-
 
                 for line in lines {
                     // Convert the String for the given line to an array of tokens separated by a comma
@@ -97,11 +94,13 @@ class FileController {
 
             } else {
                 app.logger.critical("Unable to convert Data Buffer for questions into String")
-                throw FileControllerError.ConversionError(message: "Unable to convert Data Buffer for questions into String")
+
+                let errorMessage = "Unable to convert Data Buffer for questions into String"
+                throw FileControllerError.conversionError(message: errorMessage)
             }
         } catch {
             app.logger.critical("Unable to read question data")
-            throw FileControllerError.ReadError(message: "Unable to read question data")
+            throw FileControllerError.readError(message: "Unable to read question data")
         }
 
         return questions
@@ -130,11 +129,9 @@ class FileController {
               // Create Array of Strings consisting of each line
               let lines: [String] = dataString.components(separatedBy: "\n")
 
-
               // 2D Array in which each row is an array of columns for the given row in the sheet
               // Outer Array represents a line or row from the csv file
               var dataArray = [[String]]()
-
 
               for line in lines {
                   // Convert the String for the given line to an array of tokens separated by a comma
@@ -150,32 +147,27 @@ class FileController {
 
               dataArray.remove(at: 0) // Remove header
 
-//              var id: Int
-//              var value: Int
-
               for row in dataArray {
 
                   // Convert id and value into Integers
                   if let id = Int(row[0]) {
                       if let value = Int(row[2]) {
                           answers[id] = Answer(id: id, label: row[1], value: value)
-
                       }
                   }
-
               }
 
           } else {
               app.logger.critical("Unable to convert Data Buffer for answers into String")
-              throw FileControllerError.ConversionError(message: "Unable to convert Data Buffer for answers into String")
+              let errorMessage = "Unable to convert Data Buffer for answers into String"
+              throw FileControllerError.conversionError(message: errorMessage)
           }
         } catch {
             app.logger.critical("unable to read answer data")
-            throw FileControllerError.ReadError(message: "Unable to read answer data")
+            throw FileControllerError.readError(message: "Unable to read answer data")
         }
 
         return answers
-
     }
 
     func loadResponses(surveyID id: Int) throws -> [SurveyResponse] {
@@ -195,11 +187,9 @@ class FileController {
               // Create Array of Strings consisting of each line
               let lines: [String] = dataString.components(separatedBy: "\n")
 
-
               // 2D Array in which each row is an array of columns for the given row in the sheet
               // Outer Array represents a line or row from the csv file
               var dataArray = [[String]]()
-
 
               for line in lines {
                   // Convert the String for the given line to an array of tokens separated by a comma
@@ -217,11 +207,10 @@ class FileController {
 
               header.removeFirst(2) // Remove the first two columns of header, since they never change
 
-              let questionIDs: [Int] = header.map { Int($0)! } // Convert the columns in the header to Ints, which are the questionID
+              // Convert the columns in the header to Ints, which are the questionID
+              let questionIDs: [Int] = header.map { Int($0)! }
 
               dataArray.remove(at: 0) // Remove header
-
-
 
               for row in dataArray {
                   let uid = row[0]
@@ -254,16 +243,16 @@ class FileController {
 
                   responses.append(SurveyResponse(uid: uid, surveyID: id,
                                                   responseType: responseType, responses: currentResponses))
-
               }
 
           } else {
-              app.logger.error("Unable to convert Data Buffer for Responses into String")
-              throw FileControllerError.ConversionError(message: "Unable to convert Data Buffer for Responses into String")
+              app.logger.error("Unable to convert Data Buffer into String")
+              let errorMessage = "Unable to convert Data Buffer for Responses into String"
+              throw FileControllerError.conversionError(message: errorMessage)
           }
         } catch {
             app.logger.error("Unable to read response data")
-            throw FileControllerError.ReadError(message: "Unable to read response data")
+            throw FileControllerError.readError(message: "Unable to read response data")
         }
 
         return responses
@@ -295,10 +284,10 @@ class FileController {
 
         func getBackup() -> DataSnapshot? {
             let jsonDir = "file://" + baseDir + "/Backups/backup.json"
-    
+
             let url = URL(string: jsonDir)!
 
-            var subdata = Data();
+            var subdata = Data()
             do {
                 subdata = try Data(contentsOf: url)
             } catch let error {
@@ -313,5 +302,5 @@ class FileController {
                 return nil
             }
         }
-    
+
 }
