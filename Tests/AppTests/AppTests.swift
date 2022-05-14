@@ -56,7 +56,8 @@ final class AppTests: XCTestCase {
             XCTAssertEqual(resp.status, .created)
         })
 
-        surveyResponse.responses[1] = nil
+//        surveyResponse.responses[1] = nil
+        surveyResponse.responses.updateValue(nil, forKey: 1)
         surveyResponse.responses[2] = 3
 
         try app.test(.PATCH, "updateResponse", beforeRequest: { req in
@@ -66,7 +67,8 @@ final class AppTests: XCTestCase {
         })
 
         if let survey = try app.dataController?.getSurveyResponse(id: surveyResponse.id) {
-            XCTAssertEqual(survey.responses[1], nil)
+
+            XCTAssertEqual(survey.responses[1] ?? nil, nil)
             XCTAssertEqual(survey.responses[2], 3)
         } else {
             XCTFail("Unable to load surveyResponses after creating them")
@@ -120,9 +122,35 @@ final class AppTests: XCTestCase {
         defer { app.shutdown() }
         try configure(app)
 
-        try app.test(.GET, "avgResponseRate/1", afterResponse: { resp in
+        var oldCharts: [ChartData]?
+        var newCharts: [ChartData]?
+
+        try app.test(.GET, "deprecated/avgResponseRate/3", afterResponse: { resp in
             XCTAssertEqual(resp.status, .ok)
+            oldCharts = try resp.content.decode([ChartData]?.self)
         })
+
+        try app.test(.GET, "avgResponseRate/3", afterResponse: { resp in
+            XCTAssertEqual(resp.status, .ok)
+            newCharts = try resp.content.decode([ChartData]?.self)
+        })
+
+        guard let unwrappedOldCharts: [ChartData] = oldCharts else {
+            XCTFail("Old Charts should not be null")
+            return
+        }
+        guard let unwrappedNewCharts: [ChartData] = newCharts else {
+            XCTFail("New Charts should not be null")
+            return
+        }
+
+        for (oldChart, newChart) in zip(unwrappedOldCharts, unwrappedNewCharts) {
+            for (oldMeasureVal, newMeasureVal) in zip(oldChart.measureValues, newChart.measureValues) {
+                let oldRounded = Double(round(oldMeasureVal * 1000)) / 1000.0
+                let newRounded = Double(round(newMeasureVal * 1000)) / 1000.0
+                XCTAssertEqual(oldRounded, newRounded)
+            }
+        }
     }
 
     // TODO: Implement Tests for Personlity Scores Endpoint

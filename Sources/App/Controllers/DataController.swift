@@ -42,6 +42,7 @@ class DataController {
             }
 
             _ = try backup()
+            calculateAllResponseRates() /// Calculate after loading data
             app.logger.info("Successfully Loaded Survey Data and Responses")
 
         } catch let error {
@@ -66,20 +67,66 @@ class DataController {
     }
 
     func createResponse(response: SurveyResponse) throws -> Bool {
+        guard isValidResponse(response) else {
+            app.logger.error("Response is not valid")
+            return false
+        }
+
+        if let stored_resp = data.firstSurveyResponse(where: { $0.id == response.id }) {
+            data.decrementResponseCounts(response: stored_resp)
+        }
+        data.incrementResponseCounts(response: response)
+
         return try data.storeSurveyResponse(response)
     }
 
     func updateResponse(response: SurveyResponse) throws -> Bool {
+        guard isValidResponse(response) else {
+            app.logger.error("Response is not valid")
+            return false
+        }
+
+        if let stored_resp = data.firstSurveyResponse(where: { $0.id == response.id }) {
+            data.decrementResponseCounts(response: stored_resp)
+        }
+
+        data.incrementResponseCounts(response: response)
+
         return try data.storeSurveyResponse(response)
     }
 
     func deleteResponse(id: UUID) throws -> Bool {
+        if let stored_resp = data.firstSurveyResponse(where: { $0.id == id }) {
+            data.decrementResponseCounts(response: stored_resp)
+        }
+
         app.logger.critical("Data Controller: Atetmpting to delete")
         return data.deleteSurveyResponse(id: id)
     }
 
+    /// Checks whehter a response for the given user exists inside the
+    /// ServerData object. Used while updating or inserting new
+    /// responses
     func responseExists(forUser uid: String) throws -> Bool {
         return data.firstSurveyResponse(where: { $0.uid == uid }) != nil
+    }
+
+    /// Checks whether the response contains a valid Survey, and that
+    /// it contains a key for every questionID in that survey
+    ///
+    /// - Returns true if survey exists and questionIDs in survey
+    /// match the survey itself.
+    func isValidResponse(_ response: SurveyResponse) -> Bool {
+        let questionIDs = response.responses.keys.sorted(by: <)
+
+        guard let survey = data.firstSurvey(where: { $0.id == response.surveyID }) else {
+            app.logger.error("Survey \(response.surveyID) not found")
+            return false
+        }
+
+        let actualQuestionIDs = survey.questions.keys.sorted(by: <)
+
+        return questionIDs == actualQuestionIDs
     }
 
     /// This is a helper function used to reverse an Answer Choice for Personality Test Analysis.
@@ -89,8 +136,6 @@ class DataController {
     }
 
     func personalityScore(forUser uid: String) throws -> PersonalityScore? {
-
-        // MARK: - Retrieve Response for Personality Test Calculation
         guard let responses = try? self.getSurveyResponses(uid: uid) else { return nil }
         var responseForCalculation: SurveyResponse
         let postResponses = responses.filter { $0.responseType == "post" }
@@ -101,8 +146,7 @@ class DataController {
         } else {
             responseForCalculation = responses[0]
         }
-
-        // MARK: - Unpack Answers for Response
+        
         let answers = responseForCalculation.responses.values
 
         /// Formulas for analyzing the big five test use indexing at 1 instead of 0, so
@@ -198,6 +242,7 @@ class DataController {
 
             if let responseSuccess = try? data.writeSurveyResponses(snapshot.surveyResponses) {
                 if let surveySuccess = try? data.writeSurveys(snapshot.surveys) {
+                    calculateAllResponseRates()
                     return responseSuccess && surveySuccess
                 }
             }
@@ -205,7 +250,8 @@ class DataController {
         return false
     }
 
-    func avgResponseRate(surveyID: Int) -> [ChartData]? {
+    func deprecatedAvgResponseRate(surveyID: Int) -> [ChartData]? {
+        app.logger.warning("This function for AvgResponse Rate is deprecated")
         let responses = data.filterSurveyResponses { $0.surveyID == surveyID && $0.responseType == "post" }
         guard let survey = data.firstSurvey(where: {$0.id == surveyID}) else { return nil }
         let questionCount = survey.questions.count
@@ -235,6 +281,61 @@ class DataController {
         return charts
     }
 
+    /// This calculates the response rates for all surveys by iterating
+    /// over surveyResponses one at a time.
+    ///
+    /// - Complexity: O(*n*) where *n* is the size of the surveyResponse array
+    func calculateAllResponseRates() {
+
+        data.initializeResponceCounts()
+
+        let responses = data.filterSurveyResponses { $0.responseType == "post" }
+        let surveys = data.filterSurveys { _ in true }
+
+        for survey in surveys {
+            let questionCount = survey.questions.count
+
+            for questionID in 1...questionCount {
+                for response in responses.filter({ $0.surveyID == survey.id }) {
+                    if let answerChoice = response.responses[questionID] {
+                        data.incrementResponseCount(surveyID: survey.id, questionID: questionID, answerID: answerChoice)
+                    }
+                }
+            }
+
+        }
+    }
+
+    /// Return Avg Response Rates based on Cached Values
+    func AvgResponseRates(surveyID: Int) -> [ChartData]? {
+        guard let survey = data.firstSurvey(where: {$0.id == surveyID}) else { return nil }
+        let questionCount = survey.questions.count
+        let answerCount = survey.answers.count
+
+        var charts = [ChartData]()
+
+        for questionID in 1...questionCount {
+            var answerCounts = [Int: Int]()
+            for answerID in 1...answerCount {
+                answerCounts[answerID] = data.getAnswerCount(surveyID: surveyID,
+                                                             questionID: questionID,
+                                                             answerID: answerID)
+            }
+            if let nonNullResponseCount = data.getResponseCount(surveyID: surveyID, questionID: questionID) {
+                let sortedCounts = answerCounts.sorted(by: <)
+                let dimmensionValues =  sortedCounts.map { $0.key }
+                let measureValues = sortedCounts.map { 100.0 * Double($0.value) / Double(nonNullResponseCount) }
+                charts.append(ChartData(surveyID: surveyID,
+                                        questionID: questionID,
+                                        dimensionName: "AnswerID",
+                                        measureName: "AvgResponseRate",
+                                        dimensionValues: dimmensionValues,
+                                        measureValues: measureValues))
+            }
+
+        }
+        return charts
+    }
 }
 
 struct MyConfigurationKey: StorageKey {
@@ -248,7 +349,6 @@ extension Application {
         }
         set {
             self.storage[MyConfigurationKey.self] = newValue
-
         }
     }
 }
