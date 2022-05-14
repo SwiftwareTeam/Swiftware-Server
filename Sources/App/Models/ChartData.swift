@@ -8,11 +8,11 @@
 import Foundation
 import Vapor
 
-struct ChartData : Content {
+struct ChartData: Content {
     var surveyID: Int
     var questionID: Int
-    var dimensionName : String
-    var measureName : String
-    var dimensionValues : [Int]
-    var measureValues : [Double]
+    var dimensionName: String
+    var measureName: String
+    var dimensionValues: [Int]
+    var measureValues: [Double]
 }

@@ -19,7 +19,10 @@ final class AppTests: XCTestCase {
         defer { app.shutdown() }
         try configure(app)
 
-        let surveyResponse = SurveyResponse(uid: "u00", surveyID: 1, responseType: "new", responses: [1: 1, 2: 1, 3: nil])
+        let surveyResponse = SurveyResponse(uid: "u00",
+                                            surveyID: 1,
+                                            responseType: "new",
+                                            responses: [1: 1, 2: 1, 3: nil])
 
         try app.test(.POST, "createResponse", beforeRequest: { req in
             try req.content.encode(surveyResponse)
@@ -66,11 +69,11 @@ final class AppTests: XCTestCase {
             XCTAssertEqual(survey.responses[1], nil)
             XCTAssertEqual(survey.responses[2], 3)
         } else {
-            XCTFail()
+            XCTFail("Unable to load surveyResponses after creating them")
         }
 
     }
-    
+
     func testDeleteResponse() async throws {
         let app = Application(.testing)
         defer { app.shutdown() }
@@ -127,20 +130,26 @@ final class AppTests: XCTestCase {
         let app = Application(.testing)
         defer { app.shutdown() }
         try configure(app)
-        var sampleScore = PersonalityScore(surveyID: 1, userID: "u00", responseID: UUID(),categories: ["Extraversion", "Agreeableness", "Conscientiousness", "Neuroticism", "Openness"], scores: [0.625, 0.7, 0.75, 0.85, 0.4])
-                                                                                                        
-        if let score = try app.dataController?.personalityScore(forUser: "u00"){
+        var sampleScore = PersonalityScore(surveyID: 1,
+                                           userID: "u00",
+                                           responseID: UUID(),
+                                           categories: ["Extraversion",
+                                                        "Agreeableness",
+                                                        "Conscientiousness",
+                                                        "Neuroticism",
+                                                        "Openness"],
+                                           scores: [0.625, 0.7, 0.75, 0.85, 0.4])
+
+        if let score = try app.dataController?.personalityScore(forUser: "u00") {
             sampleScore.scores = score.scores
             XCTAssertEqual(sampleScore.surveyID, score.surveyID)
             XCTAssertEqual(sampleScore.userID, score.userID)
             XCTAssertEqual(sampleScore.categories, score.categories)
             XCTAssertEqual(sampleScore.scores, score.scores)
-            
+
         } else {
-            XCTFail()
+            XCTFail("Unable to create personality score for user u00")
         }
-            
+
         }
-    
-    
 }

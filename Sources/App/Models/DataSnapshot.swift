@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DataSnapshot : Codable {
+struct DataSnapshot: Codable {
     var date = Date()
     var surveys: [Survey]
     var surveyResponses: [SurveyResponse]

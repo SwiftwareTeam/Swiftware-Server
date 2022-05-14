@@ -9,7 +9,7 @@
 import XCTVapor
 import XCTest
 
-final class ServerDataTests : XCTestCase {
+final class ServerDataTests: XCTestCase {
 
     func testInsertRetrieveSurvey() async throws {
         let data = ServerData()
@@ -63,19 +63,15 @@ final class ServerDataTests : XCTestCase {
     }
 }
 
-final class DataControllerTests : XCTestCase {
+final class DataControllerTests: XCTestCase {
     func testInitialize() async throws {
         let app = Application(.testing)
         defer { app.shutdown() }
 
         let controller = DataController(app)
 
-//        if let succeeded = try? await controller.initialize() {
-//            XCTAssertTrue(succeeded)
-//        }
-
         guard let responses = try? controller.getSurveyResponses(uid: "u00") else {
-            XCTFail()
+            XCTFail("response from u00 should exist at start")
             return
         }
         XCTAssertGreaterThanOrEqual(responses.count, 2)
