@@ -11,11 +11,17 @@ import Foundation
   An object which stores data collections used by the vapor server.
  */
 class ServerData {
-    /// Array of Surveys
     private var surveys = [Survey]()
-
-    /// Array of Survey Responses
     private var surveyResponses = [SurveyResponse]()
+
+    /// Stores the number of responses for every answer
+    /// of every question of every survey. Keys are:
+    /// SurveyID : QuestionID : AnswerID : responseCount
+    private var answerCounts = [Int: [Int: [Int: Int]]]()
+
+    /// Stores the number of non-null responses for every QuestionID
+    /// SurveyID : QuestionID : responseCount
+    private var nonNullResponseCounts = [Int: [Int: Int]]()
 
     private var queue = DispatchQueue(label: "ServerData.queue", attributes: .concurrent)
 
@@ -159,6 +165,82 @@ class ServerData {
                 return true
             } else {
                 return false
+            }
+        }
+    }
+
+    /// Increments the count of responses for the the specified, survey, question and answer
+    func incrementResponseCount(surveyID: Int, questionID: Int, answerID: Int?) {
+        queue.sync(flags: .barrier) {
+            if let actualAnswerID: Int = answerID {
+                self.answerCounts[surveyID]?[questionID]?[actualAnswerID]? += 1
+                self.nonNullResponseCounts[surveyID]?[questionID]? += 1
+            }
+        }
+    }
+
+    func incrementResponseCounts(response: SurveyResponse) {
+        queue.sync(flags: .barrier) {
+            for questionID in 1...response.responses.count {
+                guard let responseVal = response.responses[questionID] else {
+                    print("Error: Missing question \(questionID) in response")
+                    return
+                }
+
+                if let answerChoice: Int = responseVal {
+                    self.answerCounts[response.surveyID]?[questionID]?[answerChoice]? += 1
+                    self.nonNullResponseCounts[response.surveyID]?[questionID]? += 1
+                }
+            }
+        }
+    }
+    func decrementResponseCounts(response: SurveyResponse) {
+        queue.sync(flags: .barrier) {
+            for questionID in 1...response.responses.count {
+                guard let responseVal = response.responses[questionID] else {
+                    print("Error: Missing question \(questionID) in response")
+                    return
+                }
+                if let answerChoice = responseVal {
+                    self.answerCounts[response.surveyID]?[questionID]?[answerChoice]? -= 1
+                    self.nonNullResponseCounts[response.surveyID]?[questionID]? -= 1
+                }
+            }
+        }
+
+    }
+
+    func getAnswerCount(surveyID: Int, questionID: Int, answerID: Int) -> Int {
+        queue.sync(flags: .barrier) {
+            return self.answerCounts[surveyID]?[questionID]?[answerID] ?? 0
+        }
+    }
+
+    func getResponseCount(surveyID: Int, questionID: Int) -> Int? {
+        queue.sync(flags: .barrier) {
+            return self.nonNullResponseCounts[surveyID]?[questionID] ?? nil
+        }
+    }
+
+    /// Initialize counts of zero for all answers to all questions for all surveys
+    func initializeResponceCounts() {
+        queue.sync(flags: .barrier) {
+            let surveyCnt = self.surveys.count
+            for surveyID in 0..<surveyCnt {
+                let questionCount = self.surveys[surveyID].questions.keys.count
+                let answerCount = self.surveys[surveyID].answers.keys.count
+
+                self.answerCounts[surveyID] = [Int: [Int: Int]]()
+                self.nonNullResponseCounts[surveyID] = [Int: Int]()
+
+                for questionID in 1...questionCount {
+                    self.answerCounts[surveyID]?[questionID] = [Int: Int]()
+                    self.nonNullResponseCounts[surveyID]?[questionID] = 0
+
+                    for answerID in 1...answerCount {
+                        self.answerCounts[surveyID]?[questionID]?[answerID] = 0
+                    }
+                }
             }
         }
     }

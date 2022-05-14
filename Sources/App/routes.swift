@@ -101,6 +101,21 @@ func routes(_ app: Application) throws {
         }
     }
 
+    app.get("deprecated","avgResponseRate", ":surveyID") { req -> [ChartData] in
+        guard let surveyIDString = req.parameters.get("surveyID") else {
+            throw Abort(.badRequest)
+        }
+        guard let surveyID = Int(surveyIDString) else {
+            throw Abort(.badRequest)
+        }
+
+        if let charts = app.dataController?.deprecatedAvgResponseRate(surveyID: surveyID) {
+            return charts
+        } else {
+            throw Abort(.internalServerError)
+        }
+    }
+
     app.get("avgResponseRate", ":surveyID") { req -> [ChartData] in
         guard let surveyIDString = req.parameters.get("surveyID") else {
             throw Abort(.badRequest)
@@ -109,7 +124,7 @@ func routes(_ app: Application) throws {
             throw Abort(.badRequest)
         }
 
-        if let charts = app.dataController?.avgResponseRate(surveyID: surveyID) {
+        if let charts = app.dataController?.AvgResponseRates(surveyID: surveyID) {
             return charts
         } else {
             throw Abort(.internalServerError)
