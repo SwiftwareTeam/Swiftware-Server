@@ -180,4 +180,29 @@ final class AppTests: XCTestCase {
         }
 
         }
+    func testCalcPerformancet() throws {
+        let app = Application(.testing)
+        defer{ app.shutdown()}
+        try configure(app)
+        
+        
+        
+       
+        measure {
+            let sampleScore = PersonalityScore(surveyID: 1,
+                                               userID: "u00",
+                                               responseID: UUID(),
+                                               categories: ["Extraversion",
+                                                            "Agreeableness",
+                                                            "Conscientiousness",
+                                                            "Neuroticism",
+                                                            "Openness"],
+                                               scores: [0.625, 0.7, 0.75, 0.85, 0.4])
+            
+        }
+
+
+        
+    }
 }
+
