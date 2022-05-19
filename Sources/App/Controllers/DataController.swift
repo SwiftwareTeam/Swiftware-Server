@@ -41,9 +41,15 @@ class DataController {
                 _ = try data.writeSurveyResponses(responses)
             }
 
-            _ = try backup()
-            calculateAllResponseRates() /// Calculate after loading data
-            app.logger.info("Successfully Loaded Survey Data and Responses")
+            if app.environment != .testing {
+                _ = try backup()
+                calculateAllResponseRates() /// Calculate after loading data
+                app.logger.info("Successfully Loaded Survey Data and Responses")
+            }
+            else {
+                app.logger.info("Successfully Loaded Survey Data")
+            }
+
 
         } catch let error {
             app.logger.report(error: error)

@@ -121,6 +121,7 @@ final class AppTests: XCTestCase {
         let app = Application(.testing)
         defer { app.shutdown() }
         try configure(app)
+        app.dataController?.calculateAllResponseRates()
 
         var oldCharts: [ChartData]?
         var newCharts: [ChartData]?
