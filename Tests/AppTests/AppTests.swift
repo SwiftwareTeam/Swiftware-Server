@@ -205,5 +205,47 @@ final class AppTests: XCTestCase {
 
         
     }
+    func testGetUser() throws {
+            let app = Application(.testing)
+            defer { app.shutdown() }
+            try configure(app)
+            
+            if let user = try app.dataController?.getUsers(){
+                let temp = user
+                let SIZE:Int = temp.count
+                
+                measure(){
+                    for i in 0...SIZE - 1{
+                    XCTAssertEqual(temp[i], user[i])
+                }
+                
+            }
+        }
+            else {
+                XCTFail("Unable to create personality score for user u00")
+            }
+        }
+        
+        func testGetSurvey() throws {
+            let app = Application(.testing)
+            defer { app.shutdown() }
+            try configure(app)
+            
+            if let survey = try app.dataController?.getSurveys(){
+                let temp = survey
+                let SIZE:Int = temp.count
+                
+                measure(){
+                    for i in 0...SIZE - 1{
+                    XCTAssertEqual(temp[i], survey[i])
+                }
+                
+            }
+        }
+            else {
+                XCTFail("Unable to create personality score for user u00")
+            }
+        }
+       
 }
 
